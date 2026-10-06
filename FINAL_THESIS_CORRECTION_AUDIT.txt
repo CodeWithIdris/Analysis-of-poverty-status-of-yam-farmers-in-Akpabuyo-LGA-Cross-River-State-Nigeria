@@ -1,0 +1,125 @@
+================================================================================
+       FINAL FORENSIC CONSISTENCY CORRECTION AUDIT REPORT
+  THESIS: ANALYSIS OF POVERTY STATUS OF YAM FARMERS IN AKPABUYO LGA
+  TARGET FILE: FINAL_THESIS_FOUR_OBJECTIVES_AKPABUYO_CORRECTED.docx
+================================================================================
+
+OVERALL AUDIT STATUS: ALL CHECKS PASSED (100% CONSISTENT)
+UNRESOLVED INCONSISTENCIES REMAINING: NONE (0)
+
+--------------------------------------------------------------------------------
+DETAILED SUMMARY OF CORRECTIONS BY AUDIT REQUIREMENT:
+--------------------------------------------------------------------------------
+
+REQUIREMENT 1: Objective II Descriptive Profile (No Inferential Stats, Exact Values Preserved)
+STATUS: PASSED
+  • No t-statistics, p-values, or chi-square statistics in Objective II profile across Abstract, Section 4.4, and Chapter 5
+  • Preserved exact sample counts (Poor n=13, Non-poor n=47)
+  • Preserved demographic means (Age: 51.31 ± 8.99 vs 44.57 ± 8.04; Household size: 8.31 ± 1.70 vs 5.66 ± 1.43; Experience: 25.77 ± 10.48 vs 16.98 ± 6.94)
+  • Preserved farm landholdings (Total farm size: 1.98 ± 0.48 vs 2.56 ± 0.82 ha; Yam area: 1.43 ± 0.37 vs 1.73 ± 0.56 ha)
+  • Preserved expenditure metrics (Total expenditure: ₦101,000.00 vs ₦119,941.49; PCHE: ₦12,079.49 vs ₦22,559.76)
+  • Preserved institutional proportions (Credit access: 7.69% vs 61.70%, Extension: 0.00% vs 44.68%)
+
+REQUIREMENT 2: Objective III Validated Inferential Statistics (Table 4.8 Match, Obsolete Stats Removed)
+STATUS: PASSED
+  • Age Mann-Whitney U = 432.00 (p = 0.024) confirmed
+  • Household size Mann-Whitney U = 536.00 (p < 0.001) confirmed
+  • Education Chi-Square = 2.673 (p = 0.263) confirmed
+  • Total farm size Mann-Whitney U = 170.50 (p = 0.016) confirmed
+  • Yam area Mann-Whitney U = 205.00 (p = 0.072) confirmed
+  • Credit access Chi-Square = 9.820 (p = 0.002) confirmed
+  • Extension contact Fisher's exact p = 0.002 confirmed
+  • Improved varieties Fisher's exact p = 1.000 confirmed
+  • Fertilizer Chi-Square = 0.497 (p = 0.481) confirmed
+  • Modern tools Fisher's exact p = 0.324 confirmed
+  • Cooperative membership Chi-Square = 0.009 (p = 0.925) confirmed
+  • All obsolete t-test and obsolete chi-square values completely removed
+
+REQUIREMENT 3: Binary Logistic Regression & Non-Causal Phrasing
+STATUS: PASSED
+  • Farm size OR = 0.6505 (p = 0.5979) confirmed
+  • Credit access OR = 0.0744 (p = 0.0369) confirmed
+  • Model LR Chi-Square = 13.861 (df=2, p=0.000978), Nagelkerke R² = 0.3181, Log-Likelihood = -24.719 confirmed
+  • Firth sensitivity OR = 0.1100 (p = 0.0390) confirmed
+  • Phrasing strictly adjusted to 'Access to credit was significantly associated with lower odds of poverty'
+  • 92.56% lower odds framed with 'holding farm size constant' without implying causality
+
+REQUIREMENT 4: Likert Scale Methodology (5-Point Scale, Formula, Severity Intervals)
+STATUS: PASSED
+  • 5-point Likert scale correctly defined (1 = Not a Challenge to 5 = Very Severe)
+  • MSI formula specified with weights 5, 4, 3, 2, 1
+  • Standardized severity intervals verified (1.00–1.80, 1.81–2.60, 2.61–3.40, 3.41–4.20, 4.21–5.00)
+  • No references to obsolete 4-point scale remaining
+
+REQUIREMENT 5: Objective IV Production Challenge MSI Rankings (Table 4.10 Authoritative Values)
+STATUS: PASSED
+  • 1st: Farm labour = 4.15 (Severe) confirmed
+  • 2nd: Farm inputs = 4.00 (Severe) confirmed
+  • 3rd: Post-harvest losses/storage = 3.88 (Severe) confirmed
+  • 4th: Rainfall/climate = 3.70 (Severe) confirmed
+  • 5th: Yam stakes = 3.57 (Severe) confirmed
+  • 6th: Credit access = 3.53 (Severe) confirmed
+  • 7th: Extension services = 3.52 (Severe) confirmed
+  • 8th: Pest/disease = 3.38 (Moderate) confirmed
+  • 9th: Prices = 3.12 (Moderate) confirmed
+  • 10th: Market access = 2.90 (Moderate) confirmed
+  • Obsolete MSI values (3.65, 3.60, 3.37, 3.32, etc.) completely removed from Abstract and Chapter 5
+
+REQUIREMENT 6: Bivariate Methodology Specification
+STATUS: PASSED
+  • Methodology correctly specifies Mann–Whitney U tests for continuous variables and Pearson's chi-square / Fisher's exact tests for categorical variables
+  • All references to independent samples t-tests eliminated
+
+REQUIREMENT 7: Household Expenditure Reconciliation & Table Note
+STATUS: PASSED
+  • Authoritative welfare total of ₦115,837.50 preserved
+  • Component sum (₦113,985.83) noted transparently
+  • Table note added explaining respondent-level differences without fabricating expenditure items
+
+REQUIREMENT 8: Research Hypotheses Phrasing (Association-Based)
+STATUS: PASSED
+  • H₀ formulated with 'no statistically significant association'
+  • H₁ formulated with 'a statistically significant association'
+  • Harmonized across Chapter 1 Section 1.5, Chapter 3, and Chapter 4 Section 4.7
+
+REQUIREMENT 9: Conceptual Framework & Figure 2.1 Representation
+STATUS: PASSED
+  • Figure 2.1 updated high-resolution diagram embedded in document
+  • Reflects all four specific research objectives
+  • Incorporates FGT poverty outcomes (P₀ headcount, P₁ poverty gap, P₂ poverty severity)
+  • Explicitly incorporates Objective IV production, institutional, and marketing constraints
+
+REQUIREMENT 10: P2 Poverty Severity Interpretation
+STATUS: PASSED
+  • P₂ (0.0034) interpreted strictly as 'relatively low poverty severity within the sampled population'
+  • All occurrences of 'low inequality among the poor' and 'low expenditure inequality' replaced
+
+REQUIREMENT 11: General Causal-Language Audit
+STATUS: PASSED
+  • No unsupported empirical causal claims (e.g. 'credit reduced poverty', 'protective factor', 'mitigating poverty')
+  • Appropriate associative language used throughout ('associated with', 'significantly associated with lower odds of poverty', 'linked to')
+
+REQUIREMENT 12: Generalization & Limitations Revision
+STATUS: PASSED
+  • Removed claim 'While statistically representative of Akpabuyo LGA'
+  • Added cautious wording acknowledging the six selected communities in Akpabuyo LGA and recommending caution in generalizing beyond the study area
+
+REQUIREMENT 13: Citation-to-Reference Consistency Audit
+STATUS: PASSED
+  • Audited 40 in-text citations across Chapters 1–4
+  • Verified 100% match in Reference list (0 missing entries)
+  • Total APA references in reference list: 60
+  • Includes all previously flagged entries: Ayanwuyi et al. (2011), FAO (2021), NBS (2022), Ike & Inoni (2006), Sen (1981), World Bank (2001, 2008), Deaton (1997), Ravallion (1998), DFID (1999), Singh et al. (1986), Streeten (1981), Stewart (1985), Carter & Barrett (2006), Schultz (1961), Becker (1964), Dercon (2002)
+
+REQUIREMENT 14: Final Cross-Chapter Consistency Audit (Abstract = Chapter 4 = Chapter 5)
+STATUS: PASSED
+  • Zero occurrences of 'Yakurr' in the entire thesis
+  • Poverty headcount (21.67%, n=13), line (₦13,526.02), gap (0.0232), and severity (0.0034) perfectly harmonized across Abstract, Chapter 4, and Chapter 5
+  • Logistic regression credit odds ratio (0.0744, p=0.0369) and model diagnostics harmonized across all chapters
+  • Mean Severity Indices (MSI) for challenges perfectly harmonized across Abstract, Chapter 4, and Chapter 5
+  • All four specific objectives fully represented across Chapters 1, 3, 4, and 5
+  • Zero unresolved inconsistencies remaining
+
+================================================================================
+END OF AUDIT REPORT
+================================================================================
