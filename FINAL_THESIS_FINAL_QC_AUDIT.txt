@@ -1,0 +1,150 @@
+================================================================================
+FINAL QUALITY-CONTROL (QC) & SUBMISSION-READINESS AUDIT REPORT
+================================================================================
+Document: FINAL_THESIS_FOUR_OBJECTIVES_AKPABUYO_FINAL.docx
+Study Title: Analysis of Poverty Status of Yam Farmers in Akpabuyo Local Government Area, Cross River State, Nigeria.
+Degree: Bachelor of Agriculture (B.Agric.) in Agricultural Economics
+Institution: University of Calabar, Calabar, Cross River State, Nigeria
+Date: October 2026
+================================================================================
+
+A. CONCEPTUAL FRAMEWORK STATUS (FIGURE 2.1 & SECTION 2.4)
+--------------------------------------------------------------------------------
+STATUS: PASS
+  [PASS] Figure 2.1 title properly defined and cited in Section 2.4.
+  [PASS] Uses 'POVERTY STATUS' as the terminal core construct (P0, P1, P2, relative poverty line z).
+  [PASS] Uses 'HOUSEHOLD WELFARE MEASURE' construct (Monthly expenditure, PCHE, expenditure allocation).
+  [PASS] Removed all unmeasured intermediary variables ('Yam Tuber Output & Marketed Surplus', 'Farm & Non-Farm Income Generation').
+  [PASS] Conceptual connectors in Figure 2.1 and descriptive text are non-directional/associational, avoiding unwarranted causal mediation claims.
+
+B. EMPIRICAL RESULT INTEGRITY
+--------------------------------------------------------------------------------
+  [PASS] Total Sample Size N = 60
+  [PASS] Poor Sample n = 13 (21.67%)
+  [PASS] Non-Poor Sample n = 47 (78.33%)
+  [PASS] Poverty Headcount Index (P0) = 0.2167
+  [PASS] Poverty Depth Index (P1) = 0.0232
+  [PASS] Poverty Severity Index (P2) = 0.0034
+  [PASS] Mean PCHE = ₦20,289.03 / person / month
+  [PASS] Relative Poverty Line (2/3 Mean PCHE) = ₦13,526.02
+  [PASS] Authoritative Reported Total Household Expenditure = ₦115,837.50
+  [PASS] Sum of 5 Component Means = ₦113,985.83 (reconciliation note present)
+  [PASS] Poor Mean Total Monthly Expenditure = ₦101,000.00
+  [PASS] Non-Poor Mean Total Monthly Expenditure = ₦119,941.49
+  [PASS] Poor Mean PCHE = ₦12,079.49
+  [PASS] Non-Poor Mean PCHE = ₦22,559.76
+  [PASS] Poor Credit Access = 7.69% vs. Non-Poor = 61.70%
+  [PASS] Poor Extension Contact = 0.00% vs. Non-Poor = 44.68%
+  [PASS] Table 4.8 Mann-Whitney U for Household Size = 536.00, p < 0.001
+  [PASS] Table 4.8 Mann-Whitney U for Total Farm Size = 170.50, p = 0.016
+  [PASS] Table 4.8 Mann-Whitney U for Age = 432.00, p = 0.024
+  [PASS] Table 4.8 Mann-Whitney U for Yam Area = 205.00, p = 0.072
+  [PASS] Table 4.8 Chi-Square for Credit Access = 9.820, p = 0.002
+  [PASS] Table 4.8 Fisher's Exact Test for Extension Contact p = 0.002
+  [PASS] Table 4.8 Chi-Square for Fertilizer/Manure = 0.497, p = 0.481
+  [PASS] Table 4.8 Chi-Square for Cooperative Membership = 0.009, p = 0.925
+  [PASS] Table 4.9 Logistic Total Farm Size OR = 0.6505, p = 0.5979
+  [PASS] Table 4.9 Logistic Credit Access OR = 0.0744, p = 0.0369
+  [PASS] Table 4.9 LR Chi-Square = 13.861 (df=2, p=0.000978)
+  [PASS] Table 4.9 Nagelkerke Pseudo-R2 = 0.3181
+  [PASS] Table 4.9 Log-Likelihood = -24.719
+  [PASS] Table 4.9 Firth Sensitivity Credit OR = 0.1100 (95% CI: 0.014-0.891, p = 0.0390)
+  [PASS] Table 4.10 Rank 1: Labour MSI = 4.15 (Severe)
+  [PASS] Table 4.10 Rank 2: Input Cost MSI = 4.00 (Severe)
+  [PASS] Table 4.10 Rank 3: Storage Losses MSI = 3.88 (Severe)
+  [PASS] Table 4.10 Rank 4: Climate/Rainfall MSI = 3.70 (Severe)
+  [PASS] Table 4.10 Rank 5: Yam Stakes MSI = 3.57 (Severe)
+  [PASS] Table 4.10 Rank 6: Credit Inadequacy MSI = 3.53 (Severe)
+  [PASS] Table 4.10 Rank 7: Extension Inadequacy MSI = 3.52 (Severe)
+  [PASS] Table 4.10 Rank 8: Pests/Diseases MSI = 3.38 (Moderate)
+  [PASS] Table 4.10 Rank 9: Output Prices MSI = 3.12 (Moderate)
+  [PASS] Table 4.10 Rank 10: Market Access MSI = 2.90 (Moderate)
+STATUS: PASS
+
+C. OBJECTIVE I–IV ALIGNMENT
+--------------------------------------------------------------------------------
+STATUS: PASS
+  [PASS] Objective I is strictly poverty measurement (PCHE, relative poverty threshold, FGT P0/P1/P2 indices).
+  [PASS] Objective II (Section 4.4 & Summary) is strictly descriptive with ZERO inferential statistics or p-values.
+  [PASS] Objective III contains all validated bivariate tests (Table 4.8) and multivariable binary logistic regression with Firth penalized estimation (Table 4.9).
+  [PASS] Objective IV is strictly descriptive 5-point Likert Mean Severity Index (MSI) ranking (Table 4.10) without unwarranted causal claims.
+
+D. CAUSAL-LANGUAGE AUDIT
+--------------------------------------------------------------------------------
+STATUS: PASS
+  [PASS] Zero instances of unsupported causal assertions ('caused', 'causes', 'led to poverty', 'reduced poverty', 'resulted in poverty').
+  [PASS] Credit association correctly phrased: 'Farmers with access to credit had approximately 92.56% lower odds of being classified as poor, holding farm size constant.'
+  [PASS] Household size relationship explicitly qualified: 'Because household size also forms the denominator of PCHE, this relationship should be interpreted with caution.'
+  [PASS] Nagelkerke R² explicitly qualified as pseudo-R² measuring relative explanatory performance.
+  [PASS] Relative poverty line approach explicitly stated: 'Following the relative poverty-line approach adopted in this study, the poverty threshold was set at two-thirds (2/3) of mean Per-Capita Monthly Household Expenditure (PCHE).'
+
+E. TABLE & FIGURE CROSS-REFERENCING AUDIT
+--------------------------------------------------------------------------------
+STATUS: PASS
+  [PASS] Table 4.1: Socio-Economic Characteristics of Yam Farmers (Consecutively numbered and cited in body text).
+  [PASS] Table 4.2: Household Expenditure Pattern of Yam Farmers (Consecutively numbered and cited in body text).
+  [PASS] Table 4.3: Poverty Line and Foster-Greer-Thorbecke (FGT) Poverty Indices (Consecutively numbered and cited in body text).
+  [PASS] Table 4.4: Socioeconomic and Institutional Profile by Poverty Status (Consecutively numbered and cited in body text).
+  [PASS] Table 4.5: Farm Asset and Production Profile by Poverty Status (Consecutively numbered and cited in body text).
+  [PASS] Table 4.6: Mean Continuous Characteristics by Poverty Status (Consecutively numbered and cited in body text).
+  [PASS] Table 4.7: Monthly Household Expenditure Profile by Poverty Status (Consecutively numbered and cited in body text).
+  [PASS] Table 4.8: Bivariate Inferential Tests of Factors Associated with Poverty Status (Consecutively numbered and cited in body text).
+  [PASS] Table 4.9: Binary Logistic Regression Model of Factors Associated with Poverty Status (Consecutively numbered and cited in body text).
+  [PASS] Table 4.10: Mean Severity Index (MSI) and Ranking of Challenges Faced by Yam Farmers (Consecutively numbered and cited in body text).
+  [PASS] Figure 2.1: Conceptual Framework of Yam Farming Households Welfare and Poverty Status (Consecutively numbered and cited in body text).
+  [PASS] Figure 3.1: Map of Cross River State showing Akpabuyo Local Government Area (Consecutively numbered and cited in body text).
+  [PASS] Figure 4.1: Poverty Headcount Distribution among Yam Farmers (Consecutively numbered and cited in body text).
+  [PASS] Figure 4.2: Monthly Household Expenditure Allocation (Consecutively numbered and cited in body text).
+  [PASS] Figure 4.3: Comparison of Mean Farm Size and Yam Cultivated Area by Poverty Status (Consecutively numbered and cited in body text).
+  [PASS] Figure 4.4: Access to Institutional Support Services by Poverty Status (Consecutively numbered and cited in body text).
+  [PASS] Figure 4.5: Mean Severity Index Ranking of Challenges Faced by Yam Farmers (Consecutively numbered and cited in body text).
+
+F. FORMATTING AUDIT
+--------------------------------------------------------------------------------
+STATUS: PASS
+  [PASS] Typography: Times New Roman 12pt standard font applied consistently across all body paragraphs and headings.
+  [PASS] Line Spacing: 1.5 line spacing for general body text; 1.15 line spacing for table contents, Preliminary pages, and Reference list.
+  [PASS] Page Margins: Standard 1.0 inch (2.54 cm) margins applied uniformly throughout all sections.
+  [PASS] Paragraph Formatting: Clean paragraph spacing (0 pt before, 4–6 pt after), first-line indent on body paragraphs, no orphan headings.
+  [PASS] Table Design: APA 7th edition table format strictly implemented (3 major horizontal rules: top border, bottom of header, bottom of table; 0 vertical rules).
+  [PASS] Preliminary Pages: Title Page, Declaration, Certification, Dedication, Acknowledgements, Abstract, Table of Contents, List of Tables, List of Figures consecutively structured.
+
+G. CITATION & REFERENCE CONSISTENCY AUDIT
+--------------------------------------------------------------------------------
+STATUS: PASS
+  [PASS] Reference section formatted in APA 7th edition alphabetical order with hanging indents.
+  [PASS] 100% concordance between in-text citations and reference list entries.
+  [PASS] Key foundational citations verified (Foster et al., 1984; NBS, 2020, 2022; World Bank, 2020, 2022; Firth, 1993; Ellis, 2000; Chambers & Conway, 1992; Ogunniyi et al., 2020).
+
+H. ABSTRACT & CHAPTER FIVE NUMERICAL CONSISTENCY
+--------------------------------------------------------------------------------
+STATUS: PASS
+  [PASS] Total sample size N = 60: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] Poor count n = 13 (21.67%): Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] Non-poor count n = 47 (78.33%): Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] Mean PCHE ₦20,289.03: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] Poverty line ₦13,526.02: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] P0 = 0.2167: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] P1 = 0.0232: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] P2 = 0.0034: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] Credit OR = 0.0744: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] Farm size OR = 0.6505: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] LR chi2 = 13.861: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] Nagelkerke R2 = 0.3181: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] Labour MSI = 4.15: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] Inputs MSI = 4.00: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] Storage MSI = 3.88: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] Climate MSI = 3.70: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] Yam stakes MSI = 3.57: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] Credit MSI = 3.53: Verified across Abstract, Chapter 4, and Chapter 5.
+  [PASS] Extension MSI = 3.52: Verified across Abstract, Chapter 4, and Chapter 5.
+
+I. UNRESOLVED ISSUES & SUBMISSION READINESS
+--------------------------------------------------------------------------------
+Total Unresolved Issues: 0
+Submission Readiness: 100% READY FOR SUBMISSION / EXAMINATION
+Overall Quality-Control Status: PASS
+
+================================================================================
+FINAL THESIS PASSED QUALITY CONTROL. NO EMPIRICAL RESULTS WERE CHANGED.
+================================================================================
