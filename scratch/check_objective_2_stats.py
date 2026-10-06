@@ -1,101 +1,70 @@
+# -*- coding: utf-8 -*-
+import sys
 import pandas as pd
 import numpy as np
-from scipy import stats
-import statsmodels.api as sm
-import statsmodels.formula.api as smf
 
-df = pd.read_csv("raw_data.csv")
+sys.stdout.reconfigure(encoding='utf-8')
 
-# Poverty Classification
-pche = df['TOTAL AVERAGE MONTHLY HOUSEHOLD EXPENDITURE'] / df['HOUSE HOLD SIZE']
-df['pche'] = pche
-mean_pche = pche.mean()
-poverty_line = (2.0 / 3.0) * mean_pche
-df['is_poor'] = (pche < poverty_line).astype(int)
+df = pd.read_csv('raw_data.csv')
+tot_exp = pd.to_numeric(df['TOTAL AVERAGE MONTHLY HOUSEHOLD EXPENDITURE'], errors='coerce')
+hh_size = pd.to_numeric(df['HOUSE HOLD SIZE'], errors='coerce')
+df['pche'] = tot_exp / hh_size
+mean_pche = df['pche'].mean()
+pov_line = (2/3) * mean_pche
+df['poor'] = (df['pche'] < pov_line).astype(int)
 
-poor = df[df['is_poor'] == 1]
-non_poor = df[df['is_poor'] == 0]
+print(f"Mean PCHE: {mean_pche:.2f}")
+print(f"Poverty line: {pov_line:.2f}")
+print(f"Poor count: {df['poor'].sum()} ({df['poor'].mean()*100:.2f}%)")
+print(f"Non-poor count: {(1-df['poor']).sum()} ({(1-df['poor']).mean()*100:.2f}%)")
 
-print(f"Total N = {len(df)}")
-print(f"Mean PCHE = {mean_pche:.2f}")
-print(f"Poverty line = {poverty_line:.2f}")
-print(f"Poor N = {len(poor)} ({len(poor)/len(df)*100:.2f}%)")
-print(f"Non-poor N = {len(non_poor)} ({len(non_poor)/len(df)*100:.2f}%)")
-
-print("\n" + "="*50)
-print("1. CONTINUOUS VARIABLES: AGE & HOUSEHOLD SIZE")
-print("="*50)
-
-for var_name, col in [("Age", "AGE"), ("Household size", "HOUSE HOLD SIZE")]:
-    print(f"\n--- {var_name} ({col}) ---")
-    p_s = poor[col]
-    np_s = non_poor[col]
-    all_s = df[col]
-    
-    print(f"Overall: Mean={all_s.mean():.2f} ± {all_s.std():.2f}, Median={all_s.median():.2f}, Min={all_s.min():.2f}, Max={all_s.max():.2f}")
-    print(f"Poor:    Mean={p_s.mean():.2f} ± {p_s.std():.2f}, Median={p_s.median():.2f}, Min={p_s.min():.2f}, Max={p_s.max():.2f}")
-    print(f"Non-poor:Mean={np_s.mean():.2f} ± {np_s.std():.2f}, Median={np_s.median():.2f}, Min={np_s.min():.2f}, Max={np_s.max():.2f}")
-    
-    # Normality tests (Shapiro-Wilk)
-    sh_p = stats.shapiro(p_s)
-    sh_np = stats.shapiro(np_s)
-    print(f"Shapiro-Wilk: Poor p={sh_p.pvalue:.4f}, Non-poor p={sh_np.pvalue:.4f}")
-    
-    # Mann-Whitney U
-    mwu = stats.mannwhitneyu(p_s, np_s)
-    print(f"Mann-Whitney U = {mwu.statistic:.3f}, p = {mwu.pvalue:.4f}")
-    
-    # Independent t-test
-    tt = stats.ttest_ind(p_s, np_s, equal_var=False)
-    print(f"Welch t-test = {tt.statistic:.3f}, p = {tt.pvalue:.4f}")
-
-print("\n" + "="*50)
-print("2. CATEGORICAL VARIABLES: EDUCATION, CREDIT, TECH, COOP")
-print("="*50)
-
-# Check Education coding in raw data
-print("\n--- Education (HIGHEST LEVEL OF EDUCATION) ---")
-print("Unique values in raw data:", df['HIGHEST LEVEL OF EDUCATION'].value_counts(dropna=False))
-# Let's see crosstab with poverty status
-ct_edu = pd.crosstab(df['HIGHEST LEVEL OF EDUCATION'], df['is_poor'], margins=True)
-print("Education vs Poverty status crosstab:")
-print(ct_edu)
-
-chi2_edu, p_edu, dof_edu, ex_edu = stats.chi2_contingency(pd.crosstab(df['HIGHEST LEVEL OF EDUCATION'], df['is_poor']))
-print(f"Pearson Chi2 = {chi2_edu:.4f}, df = {dof_edu}, p = {p_edu:.4f}")
-print("Expected frequencies:\n", ex_edu)
-
-# Let's also check binary/ordered educational attainment if applicable
-# Notice in Analysis 1, values: 0 = No formal (n=0 in raw?), 6 = Primary, 12 = Secondary, 16 = Tertiary
-for val in sorted(df['HIGHEST LEVEL OF EDUCATION'].unique()):
-    p_cnt = (poor['HIGHEST LEVEL OF EDUCATION'] == val).sum()
-    np_cnt = (non_poor['HIGHEST LEVEL OF EDUCATION'] == val).sum()
-    all_cnt = (df['HIGHEST LEVEL OF EDUCATION'] == val).sum()
-    print(f"Level {val}: Poor={p_cnt} ({p_cnt/13*100:.1f}%), Non-poor={np_cnt} ({np_cnt/47*100:.1f}%), Overall={all_cnt} ({all_cnt/60*100:.1f}%)")
-
-# Categorical variables in Section C & A
-cat_vars = [
-    ("Access to credit", "ACCESS TO CREDIT FOR YAM FARMING DURING LAST SEASON"),
-    ("Improved yam varieties", "DO YOU USE IMPROVE YAM VARIETIES"),
-    ("Fertilizer/manure application", "DO  YOU APPLY FERTILIZER OR MANURE ON YOUR YAM FARM"),
-    ("Modern farm tools/tech", "DO YOU USE MODERN FARM TOOLS OR IMPROVED TECHNOLOGIES IN YAM PRODUCTION"),
-    ("Cooperative membership", "MEMBER OF OOPERATIVE SOCIETY"),
-    ("Agricultural extension", "ACCESS TO AGRICULTURAL EXTENSION")
+print("\n============================================================")
+print("1. SOCIOECONOMIC CATEGORICAL CHARACTERISTICS BY POVERTY STATUS")
+print("============================================================")
+cat_cols = [
+    ('SEX', 'Gender'),
+    ('MARITAL STATUS', 'Marital Status'),
+    ('HIGHEST LEVEL OF EDUCATION', 'Education Level'),
+    ('OTHER SOURCE OF INCOME', 'Other Income Source'),
+    ('ACCESS TO CREDIT FOR YAM FARMING DURING LAST SEASON', 'Access to Credit'),
+    ('ACCESS TO AGRICULTURAL EXTENSION', 'Extension Contact'),
+    ('DO YOU USE IMPROVE YAM VARIETIES', 'Improved Yam Varieties'),
+    ('DO  YOU APPLY FERTILIZER OR MANURE ON YOUR YAM FARM', 'Fertilizer / Manure Use'),
+    ('DO YOU USE MODERN FARM TOOLS OR IMPROVED TECHNOLOGIES IN YAM PRODUCTION', 'Modern Tools / Technology'),
+    ('MEMBER OF OOPERATIVE SOCIETY', 'Cooperative Membership')
 ]
 
-for label, col in cat_vars:
-    print(f"\n--- {label} ({col}) ---")
-    ct = pd.crosstab(df[col], df['is_poor'], margins=True)
-    print(ct)
-    
-    ct_no_margins = pd.crosstab(df[col], df['is_poor'])
-    chi2, p_chi, dof, ex = stats.chi2_contingency(ct_no_margins)
-    or_val, p_fish = stats.fisher_exact(ct_no_margins)
-    
-    p_yes = (poor[col] == 1).sum()
-    np_yes = (non_poor[col] == 1).sum()
-    all_yes = (df[col] == 1).sum()
-    
-    print(f"Poor Yes: {p_yes}/13 ({p_yes/13*100:.1f}%), Non-poor Yes: {np_yes}/47 ({np_yes/47*100:.1f}%), Overall Yes: {all_yes}/60 ({all_yes/60*100:.1f}%)")
-    print(f"Chi2 = {chi2:.4f}, p = {p_chi:.4f} | Fisher p = {p_fish:.4f} | Min expected = {ex.min():.2f}")
+for col_name, label in cat_cols:
+    print(f"\n--- {label} ({col_name}) ---")
+    vals = df[col_name].unique()
+    for v in vals:
+        sub = df[df[col_name] == v]
+        p_sub = sub[sub['poor'] == 1]
+        np_sub = sub[sub['poor'] == 0]
+        
+        p_n = len(p_sub)
+        p_pct = (p_n / 13) * 100 # percentage within poor or percentage of total?
+        # Let's check: in profile tables, usually we report n and % within poverty group, or within category, or of group total.
+        print(f"  Category '{v}': Poor = {p_n} ({p_n/13*100:.2f}% of poor, {p_n/60*100:.2f}% of total) | Non-poor = {len(np_sub)} ({len(np_sub)/47*100:.2f}% of non-poor, {len(np_sub)/60*100:.2f}% of total) | Total = {len(sub)} ({len(sub)/60*100:.2f}%)")
 
+print("\n============================================================")
+print("2. CONTINUOUS CHARACTERISTICS BY POVERTY STATUS (MEAN +/- SD)")
+print("============================================================")
+num_cols = [
+    ('AGE', 'Age (years)'),
+    ('HOUSE HOLD SIZE', 'Household Size (persons)'),
+    ('YEARS OF FARMING EXPERIENCE', 'Farming Experience (years)'),
+    ('WHAT IS YOUR TOTAL FARM SIZE', 'Total Farm Size (ha)'),
+    ('HOW MANY HECTARES ARE USED SPECIFICALLY FOR YAM FARMING', 'Yam Farm Area (ha)'),
+    ('TOTAL AVERAGE MONTHLY HOUSEHOLD EXPENDITURE', 'Total Monthly Expenditure (NGN)'),
+    ('pche', 'Per-Capita Monthly Household Expenditure (PCHE, NGN)')
+]
+
+for col_name, label in num_cols:
+    s = pd.to_numeric(df[col_name], errors='coerce')
+    poor_vals = s[df['poor'] == 1]
+    non_poor_vals = s[df['poor'] == 0]
+    print(f"{label}:")
+    print(f"  Poor (n=13):     Mean = {poor_vals.mean():.2f}, SD = {poor_vals.std():.2f}, Min = {poor_vals.min():.2f}, Max = {poor_vals.max():.2f}")
+    print(f"  Non-poor (n=47): Mean = {non_poor_vals.mean():.2f}, SD = {non_poor_vals.std():.2f}, Min = {non_poor_vals.min():.2f}, Max = {non_poor_vals.max():.2f}")
+    print(f"  Overall (N=60):  Mean = {s.mean():.2f}, SD = {s.std():.2f}, Min = {s.min():.2f}, Max = {s.max():.2f}")
