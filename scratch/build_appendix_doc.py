@@ -66,7 +66,7 @@ def add_header_bottom_border(row):
         tcBorders.append(bottom)
         tcPr.append(tcBorders)
 
-def format_cell(cell, text, align=WD_ALIGN_PARAGRAPH.LEFT, bold=False, italic=False, font_size=10, font_name="Times New Roman"):
+def format_cell(cell, text, align=WD_ALIGN_PARAGRAPH.LEFT, bold=False, italic=False, font_size=10.5, font_name="Times New Roman"):
     cell.text = text
     set_cell_margins(cell, top=60, bottom=60, left=100, right=100)
     cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
@@ -83,7 +83,7 @@ def format_cell(cell, text, align=WD_ALIGN_PARAGRAPH.LEFT, bold=False, italic=Fa
         run.font.italic = italic
         run.font.color.rgb = RGBColor(0, 0, 0)
 
-def add_p(doc, text, space_after=6, line_spacing=1.15, align=WD_ALIGN_PARAGRAPH.JUSTIFY, bold=False, italic=False, font_size=11, font_name="Times New Roman"):
+def add_p(doc, text, space_after=6, line_spacing=1.15, align=WD_ALIGN_PARAGRAPH.JUSTIFY, bold=False, italic=False, font_size=12, font_name="Times New Roman"):
     p = doc.add_paragraph()
     p.alignment = align
     p.paragraph_format.space_before = Pt(0)
@@ -105,7 +105,7 @@ def add_mono_p(doc, text, space_after=2):
     p.paragraph_format.line_spacing = 1.0
     run = p.add_run(text)
     run.font.name = 'Courier New'
-    run.font.size = Pt(9.5)
+    run.font.size = Pt(10)
     run.font.color.rgb = RGBColor(0, 0, 0)
     return p
 
@@ -134,7 +134,7 @@ def add_heading(doc, text, level=1):
         p.paragraph_format.space_after = Pt(3)
         run = p.add_run(text)
         run.font.name = 'Times New Roman'
-        run.font.size = Pt(11)
+        run.font.size = Pt(12)
         run.font.bold = True
     run.font.color.rgb = RGBColor(0, 0, 0)
     return p
@@ -142,31 +142,38 @@ def add_heading(doc, text, level=1):
 def add_table_title(doc, title_text):
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-    p.paragraph_format.space_before = Pt(10)
+    p.paragraph_format.space_before = Pt(12)
     p.paragraph_format.space_after = Pt(3)
     p.paragraph_format.line_spacing = 1.15
     run = p.add_run(title_text)
     run.font.name = 'Times New Roman'
-    run.font.size = Pt(11)
+    run.font.size = Pt(12)
     run.font.bold = True
     run.font.color.rgb = RGBColor(0, 0, 0)
     return p
 
 def add_table_note(doc, note_text):
     p = doc.add_paragraph()
-    p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-    p.paragraph_format.space_before = Pt(2)
+    p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+    p.paragraph_format.space_before = Pt(3)
     p.paragraph_format.space_after = Pt(10)
     p.paragraph_format.line_spacing = 1.15
     run = p.add_run(note_text)
     run.font.name = 'Times New Roman'
-    run.font.size = Pt(9.5)
+    run.font.size = Pt(10.5)
     run.font.italic = True
     run.font.color.rgb = RGBColor(0, 0, 0)
     return p
 
 def create_appendix_doc():
     doc = Document()
+    
+    # Set default style to Times New Roman 12pt
+    style = doc.styles['Normal']
+    font = style.font
+    font.name = 'Times New Roman'
+    font.size = Pt(12)
+    font.color.rgb = RGBColor(0, 0, 0)
     
     # 1 inch margins
     for section in doc.sections:
@@ -200,7 +207,7 @@ def create_appendix_doc():
     p_desc.paragraph_format.space_after = Pt(100)
     r3 = p_desc.add_run("Prepared as a Statistical Analysis Appendix to the Dissertation\n\nDepartment of Agricultural Economics\nFaculty of Agriculture\nUniversity of Calabar, Calabar, Nigeria\n\nSeptember 2026")
     r3.font.name = 'Times New Roman'
-    r3.font.size = Pt(11)
+    r3.font.size = Pt(12)
     r3.font.italic = False
     
     doc.add_page_break()
@@ -311,10 +318,10 @@ def create_appendix_doc():
         format_cell(r.cells[3], row_data[3], align=WD_ALIGN_PARAGRAPH.RIGHT)
         format_cell(r.cells[4], row_data[4], align=WD_ALIGN_PARAGRAPH.RIGHT)
         format_cell(r.cells[5], row_data[5], align=WD_ALIGN_PARAGRAPH.RIGHT)
-    add_table_note(doc, "Source: Field Survey Data Analysis, 2026. Standard errors (STE) are computed using the sample survey variance estimator of individual FGT normalized poverty shortfall weights w_i = [(z - y_i)/z]^α * I(y_i < z): STE = s_w / sqrt(n), where s_w is the sample standard deviation of w_i, with 95% confidence intervals given by [Estimate ± 1.96 * STE] (bounded below by 0.0000).")
+    add_table_note(doc, "Source: Field Survey Data Analysis, 2026. Standard errors (STE) are estimated via the sample standard error of the mean applied to individual respondent-level FGT normalized poverty shortfall weights w_i = [(z - y_i)/z]^α * I(y_i < z): STE(P_α) = s_w / sqrt(n), where s_w = sqrt[ Σ (w_i - P_α)^2 / (n - 1) ]. 95% confidence intervals are given by [max(0.0000, P_α - 1.96 * STE), P_α + 1.96 * STE].")
     
     add_heading(doc, "2.2 FGT Poverty Indices Disaggregated by Gender", level=2)
-    add_p(doc, "The output format below presents subgroup decompositions by respondent gender (Group 1 = Male, n = 36; Group 2 = Female, n = 24) across the three FGT alpha parameters, calculated directly from raw_data.csv using the sample survey variance estimator.")
+    add_p(doc, "The output format below presents subgroup decompositions by respondent gender (Group 1 = Male, n = 36; Group 2 = Female, n = 24) across the three FGT alpha parameters (α = 0.00, 1.00, 2.00). Standard errors (STE) and 95% confidence intervals are computed directly from the respondent-level observations using the sample standard error of the mean for individual normalized poverty shortfalls w_i = [(z - y_i)/z]^α * I(y_i < z), where STE(P_α) = s_w / sqrt(n), s_w is the sample standard deviation of w_i, and the 95% Wald confidence bounds are [max(0.0000, P_α - 1.96 * STE), P_α + 1.96 * STE].")
     
     add_table_title(doc, "Table A2.2: FGT Poverty Indices by Gender Group (alpha = 0.00, 1.00, 2.00)")
     t_fgt_g = doc.add_table(rows=1, cols=6)
@@ -356,7 +363,7 @@ def create_appendix_doc():
         format_cell(r.cells[3], row_data[3], align=WD_ALIGN_PARAGRAPH.RIGHT, bold=is_subhdr)
         format_cell(r.cells[4], row_data[4], align=WD_ALIGN_PARAGRAPH.RIGHT, bold=is_subhdr)
         format_cell(r.cells[5], row_data[5], align=WD_ALIGN_PARAGRAPH.RIGHT, bold=is_subhdr)
-    add_table_note(doc, "Source: Field Survey Data Analysis, 2026. STE = Standard Error of estimate (s_w / sqrt(n)); LB = Lower Bound of 95% CI; UB = Upper Bound of 95% CI.")
+    add_table_note(doc, "Source: Field Survey Data Analysis, 2026. STE = Standard error of the subgroup sample mean (s_w / sqrt(n)); LB = Lower bound of 95% Wald confidence interval (truncated at 0.0000); UB = Upper bound of 95% Wald confidence interval; Pov. Line = ₦13,526.02.")
 
     # -------------------------------------------------------------
     # APPENDIX 3: BIVARIATE ANALYSIS OF FACTORS ASSOCIATED WITH POVERTY
@@ -554,7 +561,7 @@ def create_appendix_doc():
     
     notes = [
         ("1. Poverty Line Construction", "Poverty status was determined following the relative poverty line methodology. Per-Capita Monthly Household Expenditure (PCHE) was computed as total reported monthly expenditure divided by household size. The relative poverty threshold (z) was set at exactly two-thirds (2/3) of the sample mean PCHE: z = (2/3) × ₦20,289.03 = ₦13,526.02 per person per month. Households with PCHE < ₦13,526.02 were categorized as poor (n = 13, 21.67%), and those with PCHE ≥ ₦13,526.02 were categorized as non-poor (n = 47, 78.33%)."),
-        ("2. FGT Index Estimation & Standard Error Variance Formulation", "The Foster-Greer-Thorbecke indices P_α = (1/N) * Σ [(z - y_i)/z]^α * I(y_i < z) were estimated for α = 0 (headcount), α = 1 (poverty gap), and α = 2 (squared poverty gap). Standard errors (STE) were calculated using the sample survey variance estimator of individual normalized poverty weights w_i = [(z - y_i)/z]^α * I(y_i < z): STE(P_α) = s_w / sqrt(n), where s_w = sqrt[ Σ (w_i - P_α)^2 / (n - 1) ]. The 95% confidence intervals were constructed as [P_α - 1.96*STE, P_α + 1.96*STE], bounded below by 0.0000. This analytical formulation is conceptually and mathematically identical to the linearization sample variance estimator employed in Stata survey poverty routines."),
+        ("2. FGT Index Estimation & Standard Error Variance Formulation", "The Foster-Greer-Thorbecke (1984) poverty indices P_α = (1/n) * Σ w_i were estimated for α = 0 (headcount ratio), α = 1 (poverty gap index), and α = 2 (poverty severity index), where w_i = [(z - y_i)/z]^α * I(y_i < z) represents the individual normalized poverty shortfall weight for household i at poverty line z = ₦13,526.02. Standard errors (STE) are computed directly from the respondent-level observations using the sample standard error of the mean: STE(P_α) = s_w / sqrt(n), where s_w = sqrt[ Σ (w_i - P_α)^2 / (n - 1) ]. The 95% confidence intervals are constructed using asymptotic normal bounds as [max(0.0000, P_α - 1.96 * STE), P_α + 1.96 * STE]. For simple random samples with a predetermined poverty line, this analytical formulation is mathematically equivalent to the Taylor linearization survey variance estimator implemented in standard econometric poverty routines."),
         ("3. Mechanical Denominator Property of Household Size", "Because household size appears directly in the denominator of the PCHE welfare metric (PCHE = Expenditure / Household Size), larger households mathematically yield lower per-capita expenditure holding total spending constant. The observed statistical association between household size and poverty status must therefore be interpreted recognizing this arithmetic property alongside real dependency burdens."),
         ("4. Events-Per-Variable (EPV) and Model Specification", "In logistic regression, small event counts relative to the number of parameters risk overfitting and severe bias. With 13 poor events in the sample, standard epidemiological and econometric guidelines restrict multivariable estimation to 1–2 key predictors. A parsimonious model retaining Total Farm Size (physical asset) and Access to Credit (institutional liquidity) was specified and verified via Firth penalized likelihood estimation."),
         ("5. Cross-Sectional Associational Interpretation", "Because the survey utilized a cross-sectional observational design, all reported regression odds ratios and bivariate test statistics reflect empirical statistical associations rather than direct causal effects.")

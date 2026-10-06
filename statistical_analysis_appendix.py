@@ -5,6 +5,13 @@ Project: Analysis of Poverty Status of Yam Farmers in Akpabuyo Local Government 
 Sample Size: N = 60 Yam-Farming Households
 Input: raw_data.csv
 Output: Statistical calculations, tables, and verification metrics
+Methodology:
+- Relative Poverty Line: z = (2/3) * Mean Per-Capita Monthly Household Expenditure (PCHE) = NGN 13,526.02
+- FGT Poverty Indices: P_alpha = (1/n) * sum(w_i), where w_i = [(z - y_i)/z]^alpha * I(y_i < z)
+- Standard Errors (STE): Sample standard error of individual weights w_i: STE = s_w / sqrt(n), where s_w = sqrt(sum((w_i - P_alpha)^2) / (n - 1))
+- 95% Confidence Intervals: [max(0.0000, P_alpha - 1.96 * STE), P_alpha + 1.96 * STE]
+- Logistic Regression: Parsimonious model with Total Farm Size (ha) + Access to Credit (Yes=1)
+- Model Goodness-of-fit: Nagelkerke Pseudo-R2 = 0.3181
 """
 
 import os
@@ -82,7 +89,7 @@ def run_statistical_analysis():
     print(f"   - Poor Households (q):       {n_poor} ({n_poor/n_obs*100:.2f}%)")
     print(f"   - Non-Poor Households:       {n_non_poor} ({n_non_poor/n_obs*100:.2f}%)")
     
-    # 4. FGT Poverty Indices Function
+    # 4. FGT Poverty Indices Function (Sample Standard Error of the Mean Formulation)
     def calc_fgt(subset, z, alpha):
         n = len(subset)
         if n == 0:
