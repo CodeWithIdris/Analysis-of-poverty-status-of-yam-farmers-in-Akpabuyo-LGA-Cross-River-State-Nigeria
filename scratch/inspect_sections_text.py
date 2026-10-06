@@ -21,3 +21,4 @@ for i in range(240, 331):
 print("\n=== CHAPTER 5 (P467 - P500) ===")
 for i in range(467, 500):
     print(f"P{i:03d}: {doc.paragraphs[i].text}")
+

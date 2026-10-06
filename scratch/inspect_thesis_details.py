@@ -29,3 +29,4 @@ for i in range(467, 505):
     txt = doc.paragraphs[i].text.strip()
     if txt:
         print(f"P{i:03d}: {txt[:120]}")
+
