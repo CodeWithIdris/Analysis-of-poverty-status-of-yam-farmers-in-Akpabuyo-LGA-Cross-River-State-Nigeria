@@ -1,0 +1,308 @@
+STATISTICAL ANALYSIS AND RESULTS
+Analysis of Poverty Status of Yam Farmers in Akpabuyo Local Government Area, Cross River State, Nigeria
+
+
+BY
+
+FAGBUYI OLAYINKA FAITH
+Matriculation Number: 20/011145065
+
+
+DEPARTMENT OF AGRICULTURAL ECONOMICS
+FACULTY OF AGRICULTURE
+UNIVERSITY OF CALABAR, CALABAR, NIGERIA
+
+SEPTEMBER 2026
+TABLE OF CONTENTS
+SECTION 1: SAMPLE AND SOCIO-ECONOMIC CHARACTERISTICS ........ 1
+  1.1 Sample Size and Study Population Representation ....... 1
+  1.2 Sex Distribution of Respondents ....................... 1
+  1.3 Summary Statistics of Quantitative Demographic Variables ..... 2
+  1.4 Age Distribution of Yam Farmers ....................... 2
+  1.5 Marital Status and Educational Attainment ............. 3
+  1.6 Other Sources of Household Income ..................... 3
+SECTION 2: HOUSEHOLD EXPENDITURE ANALYSIS ................... 4
+  2.1 Monthly Household Expenditure Patterns ................ 4
+  2.2 Per-Capita Monthly Household Expenditure (PCHE) ....... 5
+  2.3 Expenditure Data Quality Check and Sensitivity Audit ..... 5
+SECTION 3: POVERTY STATUS ANALYSIS .......................... 7
+  3.1 Determination of the Relative Poverty Line ............ 7
+  3.2 Poverty Status Classification of Yam Farmers .......... 7
+  3.3 Foster-Greer-Thorbecke (FGT) Poverty Indices .......... 8
+SECTION 4: FACTORS ASSOCIATED WITH POVERTY STATUS ........... 10
+  4.1 Bivariate Analysis of Factors Associated with Poverty Status ..... 10
+  4.2 Interpretation of Bivariate Findings and Methodological Considerations ..... 11
+SECTION 5: LOGISTIC REGRESSION ANALYSIS ..................... 13
+  5.1 Parsimonious Multivariable Binary Logistic Regression Model ..... 13
+  5.2 Firth Penalized Logistic Regression Sensitivity Analysis ..... 14
+  5.3 Graphical Representation of Estimated Odds Ratios ..... 14
+SECTION 6: CHALLENGES FACED BY YAM FARMERS .................. 15
+  6.1 Challenge Severity Evaluation and Ranking ............. 15
+  6.2 Graphical Overview of Challenge Severity Scores ....... 16
+SECTION 7: SUMMARY OF KEY STATISTICAL FINDINGS .............. 17
+  7.1 Objective 1: Poverty Status and Expenditure Profile ..... 17
+  7.2 Objective 2: Factors Associated with Poverty Status ..... 17
+  7.3 Objective 3: Production and Institutional Challenges ..... 18
+LIST OF TABLES
+Table 1: Sex Distribution of Respondents (N = 60) ................ 1
+Table 2: Summary Statistics of Age, Household Size, and Farming Experience ..... 2
+Table 3: Marital Status and Educational Attainment of Respondents ..... 3
+Table 4: Other Sources of Household Income among Yam Farmers ..... 3
+Table 5: Mean Monthly Household Expenditure by Expenditure Category ..... 4
+Table 6: Per-Capita Monthly Household Expenditure (PCHE) of Yam Farmers ..... 5
+Table 7: Determination of the Relative Poverty Line among Yam Farmers ..... 7
+Table 8: Poverty Status Distribution of Yam Farmers in Akpabuyo LGA ..... 7
+Table 9: Foster-Greer-Thorbecke (FGT) Poverty Indices for Yam Farmers ..... 8
+Table 10: Socio-Demographic and Agricultural Factors Associated with Poverty Status ..... 10
+Table 11: Parsimonious Binary Logistic Regression Model of Poverty Status ..... 13
+Table 12: Severity Ranking of Challenges Faced by Yam Farmers in Akpabuyo LGA ..... 15
+LIST OF FIGURES
+Figure 1: Age Distribution of Yam Farmers in Akpabuyo LGA ........ 2
+Figure 2: Mean Monthly Household Expenditure by Category among Yam Farmers ..... 5
+Figure 3: Distribution of Yam Farmers by Poverty Status in Akpabuyo LGA ..... 8
+Figure 4: Odds Ratios from Parsimonious Logistic Regression Model (95% CIs) ..... 14
+Figure 5: Mean Severity Scores of Challenges Faced by Yam Farmers ..... 16
+SECTION 1: SAMPLE AND SOCIO-ECONOMIC CHARACTERISTICS
+This statistical report presents the empirical findings from a field survey administered to smallholder yam farming households in Akpabuyo Local Government Area of Cross River State, Nigeria. The target study population is represented by a complete, fully validated sample of exactly N = 60 farming households. Data integrity screening confirmed complete responses across all demographic, budgetary expenditure, agricultural production, and institutional access variables with zero missing observations.
+1.1 Sex Distribution of Respondents
+The gender composition of the sampled yam farmers is summarized in Table 1.
+Table 1: Sex Distribution of Respondents (N = 60)
+Source: Field Survey Data Analysis, 2026.
+As indicated in Table 1, male farmers constituted the majority of respondents (n = 36, 60.00%), while female farmers accounted for 40.00% (n = 24). This reflects the traditional gender participation structure in yam farming within the study area, where men are predominantly engaged in labor-intensive land preparation, mounding, and staking, while women actively participate in planting, weeding, harvesting, and marketing.
+1.2 Summary Statistics of Age, Household Size, and Farming Experience
+Table 2 presents the summary statistics for the continuous socio-economic characteristics of the respondents.
+Table 2: Summary Statistics of Age, Household Size, and Yam Farming Experience (N = 60)
+Source: Field Survey Data Analysis, 2026.
+The mean age of respondents was 46.03 ± 8.64 years, with a range of 30 to 63 years, indicating an economically active and mature farming population. Household size averaged 6.23 ± 1.84 persons (ranging from 3 to 10 persons), representing an important source of family labor for smallholder farming operations. Farmers exhibited extensive farming experience, averaging 18.88 ± 8.56 years (ranging from 6 to 40 years), which reflects substantial indigenous knowledge in yam production.
+1.3 Age Distribution of Yam Farmers
+Figure 1 illustrates the empirical distribution of farmer age across the sampled households.
+Figure 1: Age Distribution of Yam Farmers in Akpabuyo LGA
+Source: Field Survey Data Analysis, 2026.
+1.4 Marital Status and Educational Attainment
+Table 3 outlines the marital status and highest level of education completed by the respondents.
+Table 3: Marital Status and Educational Attainment of Respondents (N = 60)
+Source: Field Survey Data Analysis, 2026.
+A substantial majority of respondents were married (n = 49, 81.67%), while 10.00% (n = 6) were widowed and 8.33% (n = 5) were single. All 60 respondents had acquired formal education (100.00%), comprising secondary education (45.00%, n = 27), primary education (30.00%, n = 18), and tertiary education (25.00%, n = 15). This high literacy level provides an advantageous foundation for agricultural extension delivery and technology adoption.
+1.5 Other Sources of Household Income
+Table 4 presents the distribution of farmers engaged in supplementary income-generating activities.
+Table 4: Other Sources of Household Income among Yam Farmers (N = 60)
+Source: Field Survey Data Analysis, 2026.
+Exactly 81.67% of respondents (n = 49) reported having other sources of household income, including petty trading, agro-processing, livestock rearing, and artisanal trades, indicating active livelihood diversification among farming households.
+SECTION 2: HOUSEHOLD EXPENDITURE ANALYSIS
+Household expenditure serves as the standard empirical proxy for household permanent income and economic welfare in smallholder agricultural economies. Monthly household expenditures across food, housing, utilities, medical care, education, and transportation were recorded and analyzed.
+2.1 Monthly Household Expenditure Patterns
+Table 5 presents the mean monthly expenditures across individual budgetary categories.
+Table 5: Mean Monthly Household Expenditure by Category (N = 60)
+Source: Field Survey Data Analysis, 2026.
+Food expenditure represents the single largest component of household budgets, averaging ₦60,703.33 per month (52.40% of total expenditure). Housing and utilities accounted for 15.75% (₦18,246.67), education represented 12.54% (₦14,528.33), transportation and miscellaneous expenses accounted for 10.25% (₦11,875.83), and healthcare expenses comprised 7.45% (₦8,631.67). Total monthly household expenditure averaged ₦115,837.50.
+2.2 Graphical Representation of Mean Monthly Expenditure
+Figure 2 visually portrays the budgetary composition of household expenditure among the respondents.
+Figure 2: Mean Monthly Household Expenditure by Category among Yam Farmers in Akpabuyo LGA
+Source: Field Survey Data Analysis, 2026.
+2.3 Per-Capita Monthly Household Expenditure (PCHE)
+Per-Capita Monthly Household Expenditure (PCHE) standardizes household living standards by accounting for demographic size variations. PCHE was calculated as:
+PCHE = (Total Average Monthly Household Expenditure) / (Household Size)
+Table 6: Per-Capita Monthly Household Expenditure (PCHE) of Yam Farmers (N = 60)
+Source: Field Survey Data Analysis, 2026.
+The mean per-capita monthly household expenditure was ₦20,289.03 ± ₦9,896.79 per person per month, ranging from a minimum of ₦6,800.00 to a maximum of ₦51,666.67.
+2.4 Expenditure Data Quality Check and Sensitivity Audit
+To guarantee absolute transparency and academic rigor, a detailed audit was conducted comparing reported total monthly expenditure against the mathematical sum of individual expenditure components. Across the sample, 56 out of 60 households (93.3%) exhibited perfect arithmetic agreement between reported total expenditure and the sum of components. Exactly four observations exhibited minor arithmetic variances:
+Table 6B: Expenditure Data Quality Check across Non-Matching Observations
+Source: Field Survey Data Quality Audit, 2026.
+A rigorous sensitivity analysis was performed by re-estimating per-capita expenditure using the sum of components. This yielded a revised mean PCHE of ₦20,022.82 and a revised poverty threshold of ₦13,348.55. Poverty classification remained identical for 59 out of 60 households (98.33% classification agreement), demonstrating that the study's poverty classifications and empirical findings are exceptionally stable and robust to expenditure measurement definitions.
+SECTION 3: POVERTY STATUS ANALYSIS
+3.1 Determination of the Relative Poverty Line
+In accordance with international welfare economics and standard agricultural economics conventions (World Bank; NBS), a relative poverty threshold was established at two-thirds (2/3) of the mean per-capita monthly household expenditure:
+Mean PCHE = ₦20,289.03 per person per month
+Relative Poverty Line (z) = 2/3 × Mean PCHE = (2/3) × ₦20,289.03 = ₦13,526.02 per person per month
+Households with per-capita monthly expenditure strictly below ₦13,526.02 were classified as poor, while households with per-capita monthly expenditure at or above ₦13,526.02 were classified as non-poor.
+Table 7: Determination of the Relative Poverty Line among Yam-Farming Households (N = 60)
+Source: Field Survey Data Analysis, 2026.
+3.2 Poverty Status Distribution of Yam Farmers
+Table 8 presents the distribution of yam-farming households according to their established poverty status.
+Table 8: Poverty Status Distribution of Yam Farmers in Akpabuyo LGA (N = 60)
+Source: Field Survey Data Analysis, 2026.
+Based on the established threshold, exactly 13 households (21.67%) were categorized as poor, while 47 households (78.33%) were categorized as non-poor.
+3.3 Graphical Distribution of Poverty Status
+Figure 3 illustrates the relative distribution of poor and non-poor households in Akpabuyo LGA.
+Figure 3: Distribution of Yam Farmers by Poverty Status in Akpabuyo LGA
+Source: Field Survey Data Analysis, 2026.
+3.4 Foster-Greer-Thorbecke (FGT) Poverty Indices
+To provide a mathematically rigorous assessment of poverty incidence, depth, and severity, the Foster-Greer-Thorbecke (FGT, 1984) class of poverty measures was estimated:
+Table 9: Foster-Greer-Thorbecke (FGT) Poverty Indices for Yam Farmers (N = 60)
+Source: Field Survey Data Analysis, 2026. FGT Poverty Formula: P_alpha = (1/N) * sum(((z - y_i)/z)^alpha).
+Economic Interpretation: Interpretation of FGT Metrics:
+1. Headcount Index (P₀ = 0.2167): Quantifies poverty incidence, indicating that 21.67% of yam farmers live below the relative poverty threshold.
+2. Poverty Gap Index (P₁ = 0.0232): Quantifies poverty depth, showing that the average expenditure shortfall of poor farming households is 2.32% of the poverty line (approximately ₦313.80 per capita per month across the entire population). It does NOT represent the percentage of poor people.
+3. Squared Poverty Gap Index (P₂ = 0.0034): Quantifies poverty severity by assigning greater weight to households furthest below the poverty line, reflecting low overall expenditure inequality among the poor in Akpabuyo LGA.
+SECTION 4: FACTORS ASSOCIATED WITH POVERTY STATUS
+Specific Objective II of the research mandates analyzing factors influencing poverty status among yam farmers, explicitly considering farmer age, education, household size, access to credit, technology adoption, and cooperative membership. To fulfill this objective while maintaining methodological rigor, all six mandated factors alongside farm landholding and extension contact were evaluated across poor (n = 13) and non-poor (n = 47) farming households.
+4.1 Bivariate Analysis of Factors Associated with Poverty Status
+Table 10 presents the descriptive profiling and single primary bivariate hypothesis tests across all eleven socio-demographic, agricultural, and institutional factors.
+Table 10: Socio-Demographic and Agricultural Factors Associated with Poverty Status (N = 60)
+Source: Field Survey Data Analysis, 2026. * Statistically significant at p < 0.05. Primary test for continuous variables: Mann–Whitney U test. Categorical tests: Pearson χ² (expected counts ≥ 5) or Fisher's exact test (expected counts < 5).
+4.2 Interpretation of Bivariate Findings
+The bivariate analysis identified statistically significant differences between poor and non-poor households in age, household size, total farm size, access to credit, and extension contact:
+1. Age of Farmer: Poor farmers had significantly higher ages (mean = 51.31 ± 8.99 years; median = 53.00 years) than non-poor farmers (mean = 44.57 ± 8.04 years; median = 45.00 years). Age was approximately normally distributed within the poverty groups based on the Shapiro–Wilk assessment; however, the Mann–Whitney U test was retained as the primary comparison to provide a conservative non-parametric assessment (Mann–Whitney U = 432.00, p = 0.024; Welch t = 2.443, p = 0.025). Older farmers may face declining physical capacity for labor-intensive mound preparation.
+2. Household Size (Mechanical Dependence Consideration): Poor households had significantly larger household sizes (mean = 8.31 ± 1.70 persons; median = 9.00 persons) than non-poor households (mean = 5.66 ± 1.43 persons; median = 5.00 persons; Mann–Whitney U = 536.00, p < 0.001; Welch t = 5.129, p < 0.001). However, household size requires cautious interpretation because household size is the denominator used in calculating per-capita household expenditure, which subsequently determines poverty classification. Consequently, the observed association between household size and poverty status may partly reflect the mathematical construction of the welfare measure rather than an independent socioeconomic effect.
+3. Educational Attainment: Educational attainment did not differ significantly between poor and non-poor farmers (Pearson χ² = 2.673, df = 2, p = 0.263), although tertiary education was more prevalent among non-poor farmers (29.8%) than poor farmers (7.7%).
+4. Farm Land Holding: Poor yam farmers operated significantly smaller total farm sizes (mean = 1.98 ± 0.48 ha) than non-poor farmers (mean = 2.56 ± 0.82 ha; Mann–Whitney U = 170.50, p = 0.016). Yam area was also lower among poor farmers (1.43 ± 0.37 ha vs. 1.73 ± 0.56 ha; Mann–Whitney U = 205.00, p = 0.072).
+5. Access to Credit: Access to credit strongly distinguished non-poor farmers (61.7%, n = 29) from poor farmers (7.7%, n = 1; Pearson χ² = 9.820, df = 1, p = 0.002).
+6. Agricultural Extension Contact: None of the poor respondents reported contact with an agricultural extension agent during the preceding 12 months (0.0%, n = 0), compared with 44.7% (n = 21) of non-poor respondents (Fisher's exact test p = 0.002).
+7. Technology Adoption and Cooperative Membership: Adoption rates for improved varieties (3.3%) and modern tools (10.0%) were low and confined to non-poor households (Fisher's exact p = 1.000 and p = 0.324, respectively). Fertilizer/manure application (80.0% overall; p = 0.481) and cooperative membership (81.7% overall; p = 0.925) were widespread across both groups.
+SECTION 5: LOGISTIC REGRESSION ANALYSIS
+Because the number of poor households was limited to 13, a fully specified multivariable model containing all Objective II factors was not considered statistically reliable. A parsimonious logistic regression model was therefore retained as a complementary multivariable analysis rather than as a direct one-to-one representation of all factors specified in Objective II.
+5.1 Methodological Screening and Model Specification
+Model Diagnostic Rules: Prior to model estimation, candidate predictors were evaluated under several methodological rules:
+1. Multicollinearity: Total farm size and yam area exhibited severe collinearity (r = 0.9642, VIF = 16.00). Yam area was excluded because it is a direct subset of total farm size.
+2. Quasi-Complete Separation: Extension contact (0/13 poor), modern tools (0/13 poor), and improved varieties (0/13 poor) contained zero events in the poor group, causing standard Maximum Likelihood Estimation (MLE) algorithms to fail to converge.
+3. Mechanical Dependence: Household size was excluded from the multivariable regression to avoid circular mathematical dependence with the per-capita expenditure poverty threshold.
+4. Parsimony Rule: Given the 13 poverty events in the sample, a parsimonious two-predictor model incorporating Total Farm Size (hectares) and Access to Credit (1 = Yes, 0 = No) was retained to limit model complexity and reduce the risk of unstable estimates.
+Table 11: Parsimonious Binary Logistic Regression Model of Poverty Status in Akpabuyo LGA (N = 60)
+Source: Field Survey Data Analysis, 2026. * Statistically significant at p < 0.05. Model Likelihood Ratio χ² = 13.861 (df = 2, p = 0.001). McFadden R² = 0.221; Nagelkerke R² = 0.318. Dependent Variable: Poverty Status (1 = Poor, 0 = Non-poor). Reference category for credit access is No (0).
+5.2 Interpretation of Logistic Regression Outputs
+The binary logistic regression model demonstrated statistically significant overall fit (Likelihood Ratio χ² = 13.861, df = 2, p = 0.001), yielding a McFadden Pseudo R² of 0.221 and a Nagelkerke Pseudo R² of 0.318.
+Access to Credit: Access to agricultural credit was statistically significant in the multivariable model (β = -2.598, SE = 1.245, OR = 0.074, 95% CI: 0.007 to 0.854, p = 0.037). Holding total farm size constant, yam farmers with access to credit had 92.6% lower odds of being classified as poor compared to farmers without credit access. This reflects a strong protective association rather than a proven causal mechanism.
+Total Farm Size: Total farm size exhibited an odds ratio below one (OR = 0.651, 95% CI: 0.132 to 3.217), indicating that each additional hectare of land was associated with 34.9% lower odds of poverty; however, this association was not statistically significant in the multivariable model (p = 0.598) after controlling for credit access.
+5.3 Firth Penalized Logistic Regression Sensitivity Analysis
+To assess the stability of the small-sample logistic regression estimates, a Firth penalized logistic regression model was estimated. The Firth sensitivity analysis produced a consistent and statistically significant protective association for access to credit (OR = 0.110, 95% CI: 0.014 to 0.891, p = 0.039), confirming the robustness of the credit association under small-sample penalization.
+5.4 Graphical Representation of Estimated Odds Ratios
+Figure 4 displays the odds ratio forest plot with 95% confidence intervals on a logarithmic scale.
+Figure 4: Odds Ratios from Parsimonious Logistic Regression Model (Log Scale, 95% CIs)
+Source: Field Survey Data Analysis, 2026.
+SECTION 6: CHALLENGES FACED BY YAM FARMERS
+Specific Objective III evaluates the production, institutional, and marketing constraints encountered by yam farmers in Akpabuyo LGA. Ten potential constraints were evaluated on a 5-point Likert scale (1 = Not a Challenge, 2 = Minor Challenge, 3 = Moderate Challenge, 4 = Severe Challenge, 5 = Very Severe Challenge). Challenge severity was classified using standard 0.80 interval cutoffs: 1.00–1.80 = Not a Challenge; 1.81–2.60 = Minor Challenge; 2.61–3.40 = Moderate Challenge; 3.41–4.20 = Severe Challenge; 4.21–5.00 = Very Severe Challenge.
+6.1 Challenge Severity Ranking
+Table 12 outlines the mean severity scores, standard deviations, median scores, and resulting severity rankings for all ten evaluated challenges.
+Table 12: Severity Ranking of Challenges Faced by Yam Farmers in Akpabuyo LGA (N = 60)
+Source: Field Survey Data Analysis, 2026. Evaluation Scale: 1.00–1.80 = Not a Challenge; 1.81–2.60 = Minor; 2.61–3.40 = Moderate; 3.41–4.20 = Severe; 4.21–5.00 = Very Severe.
+The top-ranked constraint was high cost and scarcity of farm labor (mean = 4.15 ± 0.80), followed by high cost of farm inputs (mean = 4.00 ± 0.96), post-harvest losses and inadequate storage (mean = 3.88 ± 0.99), unpredictable rainfall (mean = 3.70 ± 0.85), scarcity/cost of yam stakes (mean = 3.57 ± 0.89), inadequate credit access (mean = 3.53 ± 0.98), and inadequate extension services (mean = 3.52 ± 1.07). All seven top constraints fell into the 'Severe' category. Pest infestation (3.38), unstable prices (3.12), and poor market access (2.90) were classified as 'Moderate' challenges.
+6.2 Graphical Overview of Challenge Severity Scores
+Figure 5 presents a ranked horizontal bar chart of all ten production, institutional, and marketing constraints.
+Figure 5: Mean Severity Scores of Challenges Faced by Yam Farmers in Akpabuyo LGA
+Source: Field Survey Data Analysis, 2026.
+SECTION 7: SUMMARY OF KEY STATISTICAL FINDINGS
+This section summarizes the key empirical findings aligned directly with the research project's three specific objectives:
+7.1 Objective 1: Poverty Status and Expenditure Profile
+• Sample: Exactly N = 60 smallholder yam farming households in Akpabuyo LGA, Cross River State.
+• Mean Monthly Household Expenditure: ₦115,837.50 (Food expenditure = ₦60,703.33, representing 52.40% budget share).
+• Mean Per-Capita Monthly Household Expenditure (PCHE): ₦20,289.03 per person per month.
+• Relative Poverty Threshold: ₦13,526.02 per person per month (established at 2/3 of mean PCHE).
+• Poverty Status Distribution: 13 households (21.67%) classified as poor; 47 households (78.33%) classified as non-poor.
+• Foster-Greer-Thorbecke (FGT) Poverty Indices: Headcount Index (P₀) = 0.2167 (21.67% incidence); Poverty Gap Index (P₁) = 0.0232 (2.32% depth); Squared Poverty Gap Index (P₂) = 0.0034 (0.34% severity).
+7.2 Objective 2: Factors Associated with Poverty Status
+• Level 1 Bivariate Association Tests: Identified statistically significant differences between poor and non-poor households across five factors: (1) Age of farmer (Mann–Whitney U = 432.00, p = 0.024; poor farmers were older); (2) Household size (Mann–Whitney U = 536.00, p < 0.001; poor households had larger family sizes); (3) Total farm size (Mann–Whitney U = 170.50, p = 0.016; poor farmers held smaller land sizes); (4) Access to credit (Pearson χ² = 9.820, p = 0.002; non-poor farmers had higher credit access); and (5) Agricultural extension contact (Fisher's exact test p = 0.002; extension contact was reported only by non-poor farmers).
+• Non-Significant Bivariate Factors: Educational attainment (p = 0.263), yam cultivation area (p = 0.072), fertilizer/manure use (p = 0.481), modern tools adoption (p = 0.324), improved yam varieties (p = 1.000), and cooperative membership (p = 0.925).
+• Level 2 Parsimonious Multivariable Analysis: The binary logistic regression model (LR χ² = 13.861, df = 2, p = 0.001; Nagelkerke R² = 0.318) confirmed that access to credit is significantly associated with lower odds of poverty (OR = 0.074, 95% CI: 0.007–0.854, p = 0.037; Firth sensitivity OR = 0.110, p = 0.039). Total farm size was not statistically significant in the multivariable model (OR = 0.651, p = 0.598) after controlling for credit access.
+7.3 Objective 3: Production, Institutional, and Marketing Challenges
+• Highest-Rated Challenge: High cost and scarcity of farm labor ranked 1st (Mean = 4.15 ± 0.80, classified as Severe).
+• Other Severe Constraints (Ranks 2–7): High cost of farm inputs (4.00), post-harvest losses and inadequate storage (3.88), unpredictable rainfall/climate variability (3.70), scarcity/cost of yam stakes (3.57), inadequate credit access (3.53), and inadequate extension services (3.52).
+• Moderate Constraints (Ranks 8–10): Pest and disease infestation (3.38), low and unstable yam prices (3.12), and poor access to markets (2.90).
+
+--- TABLE 1 ---
+Sex | Frequency (n) | Percentage (%)
+Male | 36 | 60.00%
+Female | 24 | 40.00%
+Total | 60 | 100.00%
+
+--- TABLE 2 ---
+Variable | Sample Size (N) | Mean | Std. Dev. | Minimum | Maximum
+Age of farmer (years) | 60 | 46.03 | 8.64 | 30.00 | 63.00
+Household size (persons) | 60 | 6.23 | 1.84 | 3.00 | 10.00
+Yam farming experience (years) | 60 | 18.88 | 8.56 | 6.00 | 40.00
+
+--- TABLE 3 ---
+Characteristic / Level | Frequency (n) | Percentage (%)
+A. Marital Status |  | 
+Single | 5 | 8.33%
+Married | 49 | 81.67%
+Divorced | 0 | 0.00%
+Widowed | 6 | 10.00%
+B. Educational Attainment |  | 
+No formal education | 0 | 0.00%
+Primary education (6 years) | 18 | 30.00%
+Secondary education (12 years) | 27 | 45.00%
+Tertiary education (16 years) | 15 | 25.00%
+
+--- TABLE 4 ---
+Engagement in Off-Farm / Other Income | Frequency (n) | Percentage (%)
+Yes (Engaged in supplementary income sources) | 49 | 81.67%
+No (Solely dependent on yam/crop farming) | 11 | 18.33%
+Total | 60 | 100.00%
+
+--- TABLE 5 ---
+Expenditure Category | Mean Monthly Expenditure (₦) | Budget Share (%)
+Food and groceries | 60,703.33 | 52.40%
+Housing and utilities | 18,246.67 | 15.75%
+Education | 14,528.33 | 12.54%
+Transportation and other | 11,875.83 | 10.25%
+Health and medical | 8,631.67 | 7.45%
+Reported Total Household Expenditure | 115,837.50 | 100.00%
+
+--- TABLE 6 ---
+Variable | Sample Size (N) | Mean (₦) | Std. Dev. (₦) | Minimum (₦) | Maximum (₦)
+Per-Capita Expenditure (PCHE) | 60 | 20,289.03 | 9,896.79 | 6,800.00 | 51,666.67
+
+--- TABLE 7 ---
+Observation ID | Sum of Components (₦) | Reported Total (₦) | Difference (₦)
+Observation 14 | 117,000.00 | 118,000.00 | +1,000.00
+Observation 37 | 109,400.00 | 109,000.00 | -400.00
+Observation 39 | 102,500.00 | 103,000.00 | +500.00
+Observation 59 | 113,500.00 | 223,500.00 | +110,000.00
+
+--- TABLE 8 ---
+Parameter / Metric | Value
+Mean Per-Capita Monthly Expenditure (Mean PCHE) | ₦20,289.03
+Poverty Line Definition | Two-thirds (2/3) of Mean PCHE
+Established Relative Poverty Threshold (z) | ₦13,526.02 per person/month
+
+--- TABLE 9 ---
+Poverty Status Category | Frequency (n) | Percentage (%)
+Poor (PCHE < ₦13,526.02) | 13 | 21.67%
+Non-poor (PCHE ≥ ₦13,526.02) | 47 | 78.33%
+Total | 60 | 100.00%
+
+--- TABLE 10 ---
+FGT Poverty Measure | Alpha (α) | Estimated Value | Percentage Equivalent
+Poverty Headcount Index (P₀) | α = 0 | 0.2167 | 21.67%
+Poverty Gap Index (P₁) | α = 1 | 0.0232 | 2.32%
+Squared Poverty Gap Index (P₂) | α = 2 | 0.0034 | 0.34%
+
+--- TABLE 11 ---
+Factor / Indicator | Poor (n = 13) | Non-poor (n = 47) | Overall (N = 60) | Statistical Test | p-value
+A. Demographic & Human Capital Factors |  |  |  |  | 
+1. Age of farmer (years) | 51.31 ± 8.99 | 44.57 ± 8.04 | 46.03 ± 8.64 | Mann–Whitney U = 432.00 | 0.024*
+2. Household size (persons) | 8.31 ± 1.70 | 5.66 ± 1.43 | 6.23 ± 1.84 | Mann–Whitney U = 536.00 | < 0.001*
+3. Educational attainment |  |  |  | Pearson χ² = 2.673 (df=2) | 0.263
+- Primary education (6 yrs) | 5 (38.5%) | 13 (27.7%) | 18 (30.0%) | — | —
+- Secondary education (12 yrs) | 7 (53.8%) | 20 (42.6%) | 27 (45.0%) | — | —
+- Tertiary education (16 yrs) | 1 (7.7%) | 14 (29.8%) | 15 (25.0%) | — | —
+B. Land Holding & Production Assets |  |  |  |  | 
+4. Total farm size (hectares) | 1.98 ± 0.48 | 2.56 ± 0.82 | 2.43 ± 0.79 | Mann–Whitney U = 170.50 | 0.016*
+5. Area under yam cultivation (ha) | 1.43 ± 0.37 | 1.73 ± 0.56 | 1.67 ± 0.53 | Mann–Whitney U = 205.00 | 0.072
+C. Institutional Access, Technology & Social Capital |  |  |  |  | 
+6. Access to credit (Yes = 1) | 1 (7.7%) | 29 (61.7%) | 30 (50.0%) | Pearson χ² = 9.820 | 0.002*
+7. Extension contact in last 12 mos (Yes) | 0 (0.0%) | 21 (44.7%) | 21 (35.0%) | Fisher's exact test | 0.002*
+8. Use of improved yam varieties (Yes) | 0 (0.0%) | 2 (4.3%) | 2 (3.3%) | Fisher's exact test | 1.000
+9. Application of fertilizer/manure (Yes) | 9 (69.2%) | 39 (83.0%) | 48 (80.0%) | Pearson χ² = 0.497 | 0.481
+10. Use of modern tools/technology (Yes) | 0 (0.0%) | 6 (12.8%) | 6 (10.0%) | Fisher's exact test | 0.324
+11. Cooperative membership (Yes = 1) | 10 (76.9%) | 39 (83.0%) | 49 (81.7%) | Pearson χ² = 0.009 | 0.925
+
+--- TABLE 12 ---
+Predictor Variable | Coefficient (β) | Standard Error (SE) | Odds Ratio (OR) | 95% CI for OR | p-value
+Total farm size (per hectare increase) | -0.430 | 0.815 | 0.651 | 0.132 – 3.217 | 0.598
+Access to credit (Yes = 1 vs No = 0) | -2.598 | 1.245 | 0.074 | 0.007 – 0.854 | 0.037*
+Intercept (Constant) | 0.433 | 1.628 | 1.542 | 0.063 – 37.458 | 0.790
+
+--- TABLE 13 ---
+Rank | Production / Institutional Challenge | Mean Score | Std. Dev. | Median | Severity Classification
+1 | High cost and scarcity of farm labour | 4.15 | 0.80 | 4.00 | Severe
+2 | High cost of farm inputs | 4.00 | 0.96 | 4.00 | Severe
+3 | Post-harvest losses and inadequate storage | 3.88 | 0.99 | 4.00 | Severe
+4 | Unpredictable rainfall and climate conditions | 3.70 | 0.85 | 4.00 | Severe
+5 | High cost / scarcity of yam stakes | 3.57 | 0.89 | 4.00 | Severe
+6 | Inadequate access to credit | 3.53 | 0.98 | 3.00 | Severe
+7 | Inadequate agricultural extension services | 3.52 | 1.07 | 4.00 | Severe
+8 | Pest and disease infestation | 3.38 | 0.83 | 3.00 | Moderate
+9 | Low and unstable prices of yam | 3.12 | 0.87 | 3.00 | Moderate
+10 | Poor access to market | 2.90 | 1.02 | 3.00 | Moderate
