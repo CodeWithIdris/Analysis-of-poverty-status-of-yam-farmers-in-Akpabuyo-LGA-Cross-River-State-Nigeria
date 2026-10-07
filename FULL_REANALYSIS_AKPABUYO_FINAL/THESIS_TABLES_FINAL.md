@@ -168,7 +168,7 @@
 - **Estimation Algorithm:** Firth (1993) bias-reduced penalized maximum likelihood; converged in 5 iterations.
 - **Multicollinearity Diagnostic:** $\text{VIF} = 1.5856$, Tolerance = $0.6307$ (Pearson $r = 0.6077$).
 
-*Interpretation:* Holding total farm size constant, access to agricultural credit was significantly associated with **$89.01\%$ lower estimated odds of poverty** ($\text{OR} = 0.1099$, Wald $95\%\text{ CI: } [0.0136, 0.8905]$, Profile $95\%\text{ CI: } [0.0087, 0.7014]$, $p = 0.0386$). Total farm size exhibited an inverse estimated association with poverty odds, but was not statistically significant after adjustment for credit access ($\text{OR} = 0.7421, p = 0.6835$).
+*Interpretation:* Access to credit was significantly associated with lower estimated odds of poverty in the final Firth penalized logistic regression model ($\text{OR} = 0.110, p = 0.039$). Relative to respondents without credit access, respondents with credit access had approximately 89% lower estimated odds of being classified as poor ($\text{OR} = 0.1099$, Wald $95\%\text{ CI: } [0.0136, 0.8905]$, Profile $95\%\text{ CI: } [0.0087, 0.7014]$), conditional on the model specification and holding farm size constant. This represents a statistical association and not a causal effect. Farm size had an inverse estimated association with poverty status, but the association was not statistically significant in the final model ($\text{OR} = 0.742, p = 0.684$; Wald $95\%\text{ CI: } [0.1769, 3.1126]$, Profile $95\%\text{ CI: } [0.1383, 2.9557]$).
 
 ---
 

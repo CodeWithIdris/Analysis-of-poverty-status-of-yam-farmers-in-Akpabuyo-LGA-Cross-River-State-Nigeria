@@ -31,7 +31,7 @@ In analyzing factors associated with household poverty status, several critical 
 | **Profile 95% CI for Credit** | **$[0.0087, 0.7014]$** | $[0.0076, 0.6558]$ | $[0.0094, 1.0482]$ | $[0.0088, 0.7225]$ |
 | **Farm Size Odds Ratio** | **0.7421 ($p = 0.6835$)** | 0.8143 ($p = 0.7845$) | 0.8038 ($p = 0.7694$) | 0.7454 ($p = 0.6888$) |
 | **Additional Predictor OR** | — | Age: 1.0504 ($p = 0.3159$) | Ext: 0.1602 ($p = 0.1415$) | Other: 0.9328 ($p = 0.9300$) |
-| **Coefficient Stability** | High (Robust across specifications) | Stable | Collinear widening | Stable |
+| **Direction & Stability** | Inverse direction maintained | Inverse direction maintained | Collinear widening | Inverse direction maintained |
 | **Convergence & Separation** | Smooth convergence; no separation | Smooth convergence | Zero cell in poor group ($0/21$) | Smooth convergence |
 
 ---
@@ -40,13 +40,13 @@ In analyzing factors associated with household poverty status, several critical 
 
 Model A is NOT selected merely because of a single $p$-value or information criterion score. Rather, its selection is justified through a comprehensive, multi-criteria econometric assessment:
 
-1. **Theoretical Coherence:** Farm size captures physical productive capacity, while credit access captures liquidity to acquire inputs and hire labour. These represent the primary structural assets in smallholder farming.
-2. **Parsimony and Sample Capacity:** With only 13 poverty events in the sample, Model A maintains an Events-per-Variable ratio of **6.5 EPV**, which respects standard econometric guidelines. Adding third variables degrades EPV to 4.3, increasing susceptibility to sample-specific noise.
+1. **Theoretical Grounding:** Farm size captures physical productive capacity, while credit access captures liquidity to acquire inputs and hire labour. These represent the primary structural assets in smallholder farming.
+2. **Parsimony and Sample Capacity:** With only 13 poverty events in the sample, Model A maintains an Events-per-Variable ratio of **6.5 EPV**, which respects standard econometric guidelines for small samples. Adding third variables degrades EPV to 4.3, increasing susceptibility to overfitting and sample-specific noise.
 3. **Absence of Outcome Leakage:** Model A completely excludes mechanically confounding variables (household size, total expenditure, food spending), ensuring all estimated relationships reflect behavioral and institutional patterns rather than mathematical circularity.
-4. **Coefficient Stability and Bounded CIs:** The estimated odds ratio for credit access is highly stable ($\text{OR} \approx 0.10 - 0.11$) across Models A, B, and D. Furthermore, in Model A, both the Wald 95% CI ($[0.0136, 0.8905]$) and the Profile Penalized-Likelihood 95% CI ($[0.0087, 0.7014]$) have upper bounds strictly below 1.0, establishing robust statistical significance.
-5. **Mitigation of Separation Artifacts:** In Model C, extension contact has zero poor recipients ($0/21$), which widens the confidence interval for credit access ($[0.0169, 1.2334], p = 0.0772$) due to institutional cross-correlation. The appropriate methodological strategy is to present Extension Contact in the descriptive/bivariate profile (Fisher's exact $p = 0.0021$) and retain Credit Access in the stable multivariable model.
+4. **Estimated Association & Bounded CIs:** The direction of the estimated association between credit access and poverty remained inverse across the candidate model specifications, although the magnitude of the estimated odds ratio varied across specifications. Furthermore, in Model A, both the Wald 95% CI ($[0.0136, 0.8905]$) and the Profile Penalized-Likelihood 95% CI ($[0.0087, 0.7014]$) have upper bounds strictly below 1.0, establishing robust statistical significance.
+5. **Mitigation of Separation Artifacts:** In Model C, extension contact has zero poor recipients ($0/21$), which causes quasi-complete separation and widens the confidence interval for credit access ($[0.0169, 1.2334], p = 0.0772$) due to institutional cross-correlation. The appropriate methodological strategy is to present Extension Contact in the descriptive/bivariate profile (Fisher's exact $p = 0.0021$) and retain Credit Access in the stable multivariable model.
 6. **Information Criteria Concordance:** Model A achieves the lowest penalized AIC ($54.576$) and lowest penalized BIC ($60.860$), confirming that adding additional predictors does not provide sufficient explanatory gain to offset the model complexity penalty.
-7. **Convergence and Global Fit:** Model A converges smoothly in 5 iterations, yielding a highly significant penalized likelihood ratio test ($\chi^2(2) = 14.2342, p = 0.000811$) and explaining $32.53\%$ of generalized variation (Nagelkerke $R^2 = 0.3253$).
+7. **Computational Convergence and Global Likelihood Evidence:** Model A converges smoothly in 5 iterations, yielding a highly significant penalized likelihood ratio test ($\chi^2(2) = 14.2342, p = 0.000811$) and explaining $32.53\%$ of generalized variation (Nagelkerke $R^2 = 0.3253$).
 
 ---
 **END OF MODEL SELECTION JUSTIFICATION**
