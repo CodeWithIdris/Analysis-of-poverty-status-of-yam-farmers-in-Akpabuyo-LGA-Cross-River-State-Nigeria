@@ -68,3 +68,4 @@ mismatch = df[poor_rep != poor_comp]
 print(f"\nMismatched cases count: {len(mismatch)}")
 for idx, row in mismatch.iterrows():
     print(f"Respondent {idx+1}: Reported PCHE={pche_rep[idx]:.2f} (Poor={poor_rep[idx]}), Comp PCHE={pche_comp[idx]:.2f} (Poor={poor_comp[idx]})")
+

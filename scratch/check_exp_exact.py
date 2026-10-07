@@ -42,3 +42,4 @@ print(f"Medical mean:   {med.mean():.2f}")
 print(f"Housing mean:   {house.mean():.2f}")
 print(f"Transport mean: {trans.mean():.2f}")
 print(f"Sum of means =  {food.mean() + educ.mean() + med.mean() + house.mean() + trans.mean():.2f}")
+

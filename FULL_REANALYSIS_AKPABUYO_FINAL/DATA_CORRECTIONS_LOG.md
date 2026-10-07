@@ -1,6 +1,6 @@
 # Data Corrections and Audit Log
 ## Study: Analysis of Poverty Status of Yam Farmers in Akpabuyo LGA, Nigeria
-**Primary Source:** `raw_data.csv` (N = 60 households, 46 columns, MD5: `628f44079ed97d91b232533b3c14e014`)  
+**Primary Source:** `raw_data.csv` ($N = 60$ households, 46 columns, MD5: `628f44079ed97d91b232533b3c14e014`)  
 **Audit Date:** October 2026  
 **Auditor:** Antigravity AI Data & Statistical Audit System  
 
@@ -25,7 +25,7 @@ This document records every data anomaly, coding inconsistency, arithmetic discr
 
 #### 2. Monthly Household Expenditure Reconciliation
 - **Audit Procedure:** For every respondent ($i = 1, \dots, 60$), the reported total monthly expenditure (`TOTAL AVERAGE MONTHLY HOUSEHOLD EXPENDITURE`) was compared against the arithmetic sum of the five constituent expenditure categories: Food (`EXP_FOOD`) + Education (`EXP_EDUC`) + Medical (`EXP_HEALTH`) + Housing/Utilities (`EXP_HOUSING`) + Transportation/Other (`EXP_TRANS`).
-- **Concordance Rate:** Exactly **56 out of 60 households (93.33%)** showed zero discrepancy ($	ext{Diff} = ₦0.00$).
+- **Concordance Rate:** Exactly **56 out of 60 households (93.33%)** showed zero discrepancy ($\text{Diff} = ₦0.00$).
 - **Discrepant Observations (4 Households, 6.67%):**
   1. **Respondent 14:** Reported Total = ₦118,000.00 | Component Sum = ₦117,000.00 | Signed Discrepancy = $+₦1,000.00$ ($+0.85\%$)
   2. **Respondent 37:** Reported Total = ₦109,000.00 | Component Sum = ₦109,400.00 | Signed Discrepancy = $-₦400.00$ ($-0.37\%$)
@@ -36,6 +36,15 @@ This document records every data anomaly, coding inconsistency, arithmetic discr
   - Mean absolute discrepancy per household = **₦1,865.00**
   - Median discrepancy = **₦0.00**
   - Maximum discrepancy = **₦110,000.00** (Respondent 59)
+- **Component Means and Arithmetic Reconciliation:**
+  - Food Expenditure Mean: **₦60,703.33** (Sum = ₦3,642,200.00)
+  - Education Expenditure Mean: **₦14,528.33** (Sum = ₦871,700.00)
+  - Health/Medical Expenditure Mean: **₦8,631.67** (Sum = ₦517,900.00)
+  - Housing/Utilities Expenditure Mean: **₦18,246.67** (Sum = ₦1,094,800.00)
+  - Transportation/Other Expenditure Mean: **₦11,875.83** (Sum = ₦712,550.00)
+  - **Arithmetic Sum of Component Means:** **₦113,985.83**
+  - **Mean of Row-Level Component Sums:** **₦113,985.83** (Total sum = ₦6,839,150.00 / 60)
+  - *Note on Prior Intermediate Text:* An earlier draft cited ₦113,975.00 due to an intermediate rounding artifact ($₦115,837.50 - ₦1,865 = ₦113,972.50 \approx ₦113,975.00$). The exact audited value from the raw data is **₦113,985.83**.
 - **Analytical Handling & Sensitivity Decision:**
   - Reported total expenditure is retained as the **primary welfare measure** because it represents the household's overarching stated monthly budget.
   - A complete parallel sensitivity analysis was executed using the component-sum aggregate (Mean PCHE = ₦20,022.82, Poverty Line = ₦13,348.55, Poor = 12, Non-poor = 48).
@@ -48,21 +57,37 @@ This document records every data anomaly, coding inconsistency, arithmetic discr
 
 #### 4. Challenge Likert Scale Structure Correction
 - **Finding:** Historical thesis text in Chapter 3 mistakenly described the challenge scale as a 4-point Likert scale (with cutoffs like 2.50).
-- **Correction:** Inspection of the research instrument (`QUESTIONNAIRE_FINAL.docx`) and raw response values ($1, 2, 3, 4, 5$) confirms an authoritative **5-point Likert scale**:
-  - $1 = 	ext{Not a Challenge}$
-  - $2 = 	ext{Minor Challenge}$
-  - $3 = 	ext{Moderate Challenge}$
-  - $4 = 	ext{Severe Challenge}$
-  - $5 = 	ext{Very Severe Challenge}$
-- **Severity Intervals:** $1.00–1.80$ (Not a Challenge), $1.81–2.60$ (Minor), $2.61–3.40$ (Moderate), $3.41–4.20$ (Severe), $4.21–5.00$ (Very Severe).
+- **Correction:** Inspection of the research instrument and raw response values ($1, 2, 3, 4, 5$) confirms an authoritative **5-point Likert scale**:
+  - $1 = \text{Not a Challenge}$
+  - $2 = \text{Minor Challenge}$
+  - $3 = \text{Moderate Challenge}$
+  - $4 = \text{Severe Challenge}$
+  - $5 = \text{Very Severe Challenge}$
+- **Validated Severity Intervals:**
+  - $1.00–1.80 = \text{Not a Challenge}$
+  - $1.81–2.60 = \text{Minor Challenge}$
+  - $2.61–3.40 = \text{Moderate Challenge}$
+  - $3.41–4.20 = \text{Severe Challenge}$
+  - $4.21–5.00 = \text{Very Severe Challenge}$
+- **Classifications under Validated Scale:**
+  - Labour Cost (4.15) $\rightarrow$ **Severe** ($3.41 \le 4.15 \le 4.20$)
+  - Input Cost (4.00) $\rightarrow$ **Severe** ($3.41 \le 4.00 \le 4.20$)
+  - Storage Losses (3.88) $\rightarrow$ **Severe** ($3.41 \le 3.88 \le 4.20$)
+  - Climate/Rainfall (3.70) $\rightarrow$ **Severe** ($3.41 \le 3.70 \le 4.20$)
+  - Yam Stakes (3.57) $\rightarrow$ **Severe** ($3.41 \le 3.57 \le 4.20$)
+  - Credit Access (3.53) $\rightarrow$ **Severe** ($3.41 \le 3.53 \le 4.20$)
+  - Extension Services (3.52) $\rightarrow$ **Severe** ($3.41 \le 3.52 \le 4.20$)
+  - Pest and Disease (3.38) $\rightarrow$ **Moderate** ($2.61 \le 3.38 \le 3.40$)
+  - Yam Prices (3.12) $\rightarrow$ **Moderate** ($2.61 \le 3.12 \le 3.40$)
+  - Market Access (2.90) $\rightarrow$ **Moderate** ($2.61 \le 2.90 \le 3.40$) *(Note: 2.90 falls strictly in the Moderate range $2.61–3.40$, not Minor).*
 
 #### 5. Multicollinearity & VIF Correction
-- **Finding:** Previous draft texts reported an impossible combination of $r = 0.6077$ and $	ext{VIF} = 1.004$ between Farm Size and Credit Access, erroneously claiming orthogonality.
+- **Finding:** Previous draft texts reported an impossible combination of $r = 0.6077$ and $\text{VIF} = 1.004$ between Farm Size and Credit Access, erroneously claiming orthogonality.
 - **Correction:** Re-computation directly from the predictor matrix establishes:
   - Pearson correlation $r = 0.6077$, Spearman rank correlation $r_s = 0.6561$.
-  - $r^2 = 0.3693 \implies 	ext{VIF} = rac{1}{1 - 0.3693} = \mathbf{1.5856}$, Tolerance = $\mathbf{0.6307}$.
-  - This confirms moderate, non-harmful collinearity well below standard thresholds ($	ext{VIF} < 5.0$).
-  - Farm Size and Yam Cultivated Area share extreme collinearity ($r = 0.9642, 	ext{VIF} = 14.2120$), confirming that Yam Area must not be included simultaneously in multivariable models.
+  - $r^2 = 0.3693 \implies \text{VIF} = \frac{1}{1 - 0.3693} = \mathbf{1.5856}$, Tolerance = $\mathbf{0.6307}$.
+  - This confirms moderate, non-harmful collinearity well below standard thresholds ($\text{VIF} < 5.0$).
+  - Farm Size and Yam Cultivated Area share extreme collinearity ($r = 0.9642, \text{VIF} = 14.2120$), confirming that Yam Area must not be included simultaneously in multivariable models.
 
 ---
 **END OF DATA CORRECTIONS LOG**

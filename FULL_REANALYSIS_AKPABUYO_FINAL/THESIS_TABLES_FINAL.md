@@ -73,27 +73,27 @@
 | **Total Monthly Expenditure**| $115,837.50 \pm 27,652.42$| 111,000 (38,000)| $101,000.00 \pm 23,245.07$| $119,941.49 \pm 27,614.88$| 100.00% | 100.00% | 100.00% |
 | **Per Capita Exp. (PCHE)**| $20,289.03 \pm 7,585.87$ | 18,883 (8,708) | $12,079.49 \pm 1,241.13$ | $22,559.76 \pm 6,903.01$ | — | — | — |
 
-*Note: Component sum average is ₦113,985.83 (56/60 exact matches, 98.33% classification agreement).*
+*Note: Component sum average across the 60 households is exactly ₦113,985.83 (56/60 exact matches, 98.33% classification agreement).*
 
 ---
 
 ### Table 4.4: Poverty Line Determination and Household Poverty Status Distribution
 | Poverty Status Category | Monthly Per Capita Expenditure Threshold ($z$) | Frequency ($n$) | Percentage ($\%$) | Mean PCHE (₦) | Standard Deviation (₦) |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **Poor Households** | $	ext{PCHE} < ₦13,526.02$ | **13** | **21.67%** | ₦12,079.49 | ₦1,241.13 |
-| **Non-Poor Households** | $	ext{PCHE} \ge ₦13,526.02$ | **47** | **78.33%** | ₦22,559.76 | ₦6,903.01 |
-| **Total Sample** | Mean PCHE = ₦20,289.03 ($2/3	ext{ Mean } = ₦13,526.02$) | **60** | **100.00%** | ₦20,289.03 | ₦7,585.87 |
+| **Poor Households** | $\text{PCHE} < ₦13,526.02$ | **13** | **21.67%** | ₦12,079.49 | ₦1,241.13 |
+| **Non-Poor Households** | $\text{PCHE} \ge ₦13,526.02$ | **47** | **78.33%** | ₦22,559.76 | ₦6,903.01 |
+| **Total Sample** | Mean PCHE = ₦20,289.03 ($2/3\text{ Mean } = ₦13,526.02$) | **60** | **100.00%** | ₦20,289.03 | ₦7,585.87 |
 
 *Source: Computed from Survey Data, 2026.*
 
 ---
 
 ### Table 4.5: Foster–Greer–Thorbecke (FGT) Poverty Indices and Gap Analysis
-| Poverty Index | Parameter ($lpha$) | Index Value | Percentage Form ($\%$) | Economic Interpretation |
+| Poverty Index | Parameter ($\alpha$) | Index Value | Percentage Form ($\%$) | Economic Interpretation |
 | :--- | :---: | :---: | :---: | :--- |
-| **Headcount Ratio ($P_0$)** | $lpha = 0$ | **0.2167** | **21.67%** | $21.67\%$ of yam farming households live below the sample-relative poverty threshold. |
-| **Poverty Gap Index ($P_1$)** | $lpha = 1$ | **0.0232** | **2.32%** | The population poverty deficit equals $2.32\%$ of the poverty line. |
-| **Poverty Severity Index ($P_2$)**| $lpha = 2$ | **0.0034** | **0.34%** | Measures poverty severity through squared normalized gaps; reflects low extreme deprivation. |
+| **Headcount Ratio ($P_0$)** | $\alpha = 0$ | **0.2167** | **21.67%** | $21.67\%$ of yam farming households live below the sample-relative poverty threshold. |
+| **Poverty Gap Index ($P_1$)** | $\alpha = 1$ | **0.0232** | **2.32%** | The population poverty deficit equals $2.32\%$ of the poverty line. |
+| **Poverty Severity Index ($P_2$)**| $\alpha = 2$ | **0.0034** | **0.34%** | Measures poverty severity through squared normalized gaps; reflects low extreme deprivation. |
 | **Mean PCHE of Poor** | — | **₦12,079.49** | — | Average monthly consumption expenditure per capita among the 13 poor households. |
 | **Average Monthly Poverty Gap** | — | **₦1,446.53** | — | Average monthly transfer required per poor person to eliminate consumption poverty. |
 | **Income Gap Ratio ($I$)** | — | **0.1069** | **10.69%** | Average depth of poverty among the poor as a percentage of the poverty line. |
@@ -124,12 +124,12 @@
 | **Total Farm Size (ha)** | Mean $\pm$ SD [Median, IQR] | $1.98 \pm 0.48$ [2.0, 0.7] | $2.56 \pm 0.82$ [2.4, 1.05] | $2.43 \pm 0.79$ [2.2, 1.0] | — |
 | **Yam Cultivated Area (ha)**| Mean $\pm$ SD [Median, IQR] | $1.43 \pm 0.37$ [1.4, 0.6] | $1.73 \pm 0.56$ [1.6, 0.8] | $1.67 \pm 0.53$ [1.5, 0.8] | — |
 
-*Source: Computed from Survey Data, 2026.*
+*Methodological Note:* Household size should be interpreted cautiously because it forms the denominator of the per-capita household expenditure measure used to classify poverty. Therefore, its observed association with poverty status does not by itself establish an independent causal effect.
 
 ---
 
 ### Table 4.7: Bivariate Analysis of Factors Associated with Poverty Status
-| Predictor Variable | Test Type Applied | Test Statistic | df | $p$-value | Effect Size Metric | Effect Size Value | Analytical Role & Diagnostic Notes |
+| Characteristic / Factor | Test Type Applied | Test Statistic | df | $p$-value | Effect Size Metric | Effect Size Value | Analytical Role & Diagnostic Notes |
 | :--- | :--- | :---: | :---: | :---: | :--- | :---: | :--- |
 | **Access to Credit** | Fisher's Exact / $\chi^2$ | $\chi^2 = 9.820$ | 1 | **0.0012\*** | Cramér's $V$ | **0.4046** | Primary multivariable candidate ($p < 0.01$). |
 | **Extension Contact** | Fisher's Exact Test | $\chi^2 = 8.878$ | 1 | **0.0021\*** | Cramér's $V$ | **0.3847** | Complete separation ($0$ poor with extension). |
@@ -153,11 +153,11 @@
 ---
 
 ### Table 4.8: Final Firth Penalized Logistic Regression Model of Factors Associated with Poverty Status
-| Covariate in Model | Coefficient ($eta$) | Robust SE | Wald $z$ | $p$-value | Odds Ratio (OR) | Wald-Type $95\%$ CI | Profile Penalized-Likelihood $95\%$ CI |
+| Covariate in Model | Coefficient ($\beta$) | Robust SE | Wald $z$ | $p$-value | Odds Ratio (OR) | Wald-Type $95\%$ CI | Profile Penalized-Likelihood $95\%$ CI |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Intercept ($eta_0$)** | $+0.1981$ | 1.4727 | +0.134 | 0.8930 | 1.2191 | $[0.0680, 21.8562]$ | $[0.0725, 33.3121]$ |
+| **Intercept ($\beta_0$)** | $+0.1981$ | 1.4727 | +0.134 | 0.8930 | 1.2191 | $[0.0680, 21.8562]$ | $[0.0725, 33.3121]$ |
 | **Total Farm Size (ha)** | $-0.2983$ | 0.7315 | -0.408 | 0.6835 | **0.7421** | $[0.1769, 3.1126]$ | $[0.1383, 2.9557]$ |
-| **Access to Credit ($1=	ext{Yes}$)**| $-2.2078$ | 1.0673 | -2.069 | **0.0386\***| **0.1099** | $[0.0136, 0.8905]$ | **$[0.0087, 0.7014]$** |
+| **Access to Credit ($1=\text{Yes}$)**| $-2.2078$ | 1.0673 | -2.069 | **0.0386\***| **0.1099** | $[0.0136, 0.8905]$ | **$[0.0087, 0.7014]$** |
 
 #### Model Fit and Diagnostic Summary
 - **Sample Size ($N$):** 60 households | **Poverty Events ($q$):** 13 households | **Events-per-Variable (EPV):** 6.5
@@ -166,21 +166,21 @@
 - **Nagelkerke Pseudo $R^2$:** **0.3253 (32.53%)**
 - **Akaike Information Criterion (Penalized AIC):** **54.576** | **Bayesian Information Criterion (Penalized BIC):** **60.860**
 - **Estimation Algorithm:** Firth (1993) bias-reduced penalized maximum likelihood; converged in 5 iterations.
-- **Multicollinearity Diagnostic:** $	ext{VIF} = 1.5856$, Tolerance = $0.6307$ (Pearson $r = 0.6077$).
+- **Multicollinearity Diagnostic:** $\text{VIF} = 1.5856$, Tolerance = $0.6307$ (Pearson $r = 0.6077$).
 
-*Interpretation:* Holding total farm size constant, access to agricultural credit was significantly associated with **$89.01\%$ lower estimated odds of poverty** ($	ext{OR} = 0.1099$, Wald $95\%	ext{ CI: } [0.0136, 0.8905]$, Profile $95\%	ext{ CI: } [0.0087, 0.7014]$, $p = 0.0386$). Total farm size exhibited an inverse estimated association with poverty odds, but was not statistically significant after adjustment for credit access ($	ext{OR} = 0.7421, p = 0.6835$).
+*Interpretation:* Holding total farm size constant, access to agricultural credit was significantly associated with **$89.01\%$ lower estimated odds of poverty** ($\text{OR} = 0.1099$, Wald $95\%\text{ CI: } [0.0136, 0.8905]$, Profile $95\%\text{ CI: } [0.0087, 0.7014]$, $p = 0.0386$). Total farm size exhibited an inverse estimated association with poverty odds, but was not statistically significant after adjustment for credit access ($\text{OR} = 0.7421, p = 0.6835$).
 
 ---
 
 ### Table 4.9: Methodological Sensitivity Comparison — Ordinary MLE vs Firth Penalized Logistic Regression
 | Model Parameter / Metric | Firth Penalized Logistic (Primary Model) | Ordinary MLE Logistic (Sensitivity Model) | Comparison & Methodological Notes |
 | :--- | :---: | :---: | :--- |
-| **Intercept ($eta_0$)** | $+0.1981$ ($p = 0.8930$) | $+0.4331$ ($p = 0.7904$) | Directionally consistent; minor baseline calibration difference. |
-| **Total Farm Size ($eta_1$)** | $-0.2983$ ($p = 0.6835$) | $-0.4301$ ($p = 0.5979$) | Consistent negative sign; non-significant in both models. |
+| **Intercept ($\beta_0$)** | $+0.1981$ ($p = 0.8930$) | $+0.4331$ ($p = 0.7904$) | Directionally consistent; minor baseline calibration difference. |
+| **Total Farm Size ($\beta_1$)** | $-0.2983$ ($p = 0.6835$) | $-0.4301$ ($p = 0.5979$) | Consistent negative sign; non-significant in both models. |
 | **Total Farm Size OR** | **0.7421** ($95\%$ CI: $0.1769–3.1126$) | **0.6505** ($95\%$ CI: $0.1316–3.2144$) | Concordant magnitude. |
-| **Access to Credit ($eta_2$)** | $-2.2078$ ($p = 0.0386$) | $-2.5981$ ($p = 0.0369$) | Both models confirm significant inverse parameter ($p < 0.05$). |
+| **Access to Credit ($\beta_2$)** | $-2.2078$ ($p = 0.0386$) | $-2.5981$ ($p = 0.0369$) | Both models confirm significant inverse parameter ($p < 0.05$). |
 | **Access to Credit OR** | **0.1099** ($95\%$ CI: $0.0136–0.8905$) | **0.0744** ($95\%$ CI: $0.0064–0.8596$) | Firth eliminates small-sample upward odds reduction bias. |
-| **Model Fit Statistic** | $	ext{Penalized LR } \chi^2 = 14.234$ ($p = 0.0008$) | $	ext{LR } \chi^2 = 13.861$ ($p = 0.00098$) | Highly significant global fit in both frameworks. |
+| **Model Fit Statistic** | $\text{Penalized LR } \chi^2 = 14.234$ ($p = 0.0008$) | $\text{LR } \chi^2 = 13.861$ ($p = 0.00098$) | Highly significant global fit in both frameworks. |
 | **Nagelkerke Pseudo $R^2$** | **0.3253 (32.53%)** | **0.3181 (31.81%)** | Explains approximately $32\%$ of generalized model variation. |
 | **Convergence Status** | Converged smoothly (5 iterations) | Converged (6 iterations) | Both algorithms converge; Firth provides superior small-sample stability. |
 
@@ -191,16 +191,16 @@
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 | **1** | **High cost and scarcity of farm labour** | 60 | 0 (0.0%) | 1 (1.7%) | 12 (20.0%) | 24 (40.0%) | 23 (38.3%) | **4.1500** | 0.7988 | 4.00 (1.00) | **Severe Challenge** |
 | **2** | **High cost of farm inputs** | 60 | 0 (0.0%) | 4 (6.7%) | 15 (25.0%) | 18 (30.0%) | 23 (38.3%) | **4.0000** | 0.9567 | 4.00 (2.00) | **Severe Challenge** |
-| **3** | **Post-harvest losses and poor storage** | 60 | 0 (0.0%) | 6 (10.0%) | 15 (25.0%) | 19 (31.7%) | 20 (33.3%) | **3.8833** | 0.9931 | 4.00 (2.00) | **Severe Challenge** |
-| **4** | **Unpredictable rainfall / climate conditions**| 60 | 0 (0.0%) | 5 (8.3%) | 18 (30.0%) | 27 (45.0%) | 10 (16.7%) | **3.7000** | 0.8497 | 4.00 (1.00) | **Severe Challenge** |
-| **5** | **High cost / scarcity of yam stakes** | 60 | 0 (0.0%) | 7 (11.7%) | 21 (35.0%) | 23 (38.3%) | 9 (15.0%) | **3.5667** | 0.8900 | 4.00 (1.00) | **Severe Challenge** |
+| **3** | **Post-harvest losses and inadequate storage facilities** | 60 | 0 (0.0%) | 6 (10.0%) | 15 (25.0%) | 19 (31.7%) | 20 (33.3%) | **3.8833** | 0.9931 | 4.00 (2.00) | **Severe Challenge** |
+| **4** | **Unpredictable rainfall and climate conditions**| 60 | 0 (0.0%) | 5 (8.3%) | 18 (30.0%) | 27 (45.0%) | 10 (16.7%) | **3.7000** | 0.8497 | 4.00 (1.00) | **Severe Challenge** |
+| **5** | **High cost/scarcity of yam stakes** | 60 | 0 (0.0%) | 7 (11.7%) | 21 (35.0%) | 23 (38.3%) | 9 (15.0%) | **3.5667** | 0.8900 | 4.00 (1.00) | **Severe Challenge** |
 | **6** | **Inadequate access to credit** | 60 | 0 (0.0%) | 8 (13.3%) | 25 (41.7%) | 14 (23.3%) | 13 (21.7%) | **3.5333** | 0.9823 | 3.00 (1.00) | **Severe Challenge** |
-| **7** | **Inadequate extension services** | 60 | 2 (3.3%) | 8 (13.3%) | 19 (31.7%) | 19 (31.7%) | 12 (20.0%) | **3.5167** | 1.0655 | 4.00 (1.00) | **Severe Challenge** |
+| **7** | **Inadequate agricultural extension services** | 60 | 2 (3.3%) | 8 (13.3%) | 19 (31.7%) | 19 (31.7%) | 12 (20.0%) | **3.5167** | 1.0655 | 4.00 (1.00) | **Severe Challenge** |
 | **8** | **Pest and disease infestation** | 60 | 0 (0.0%) | 8 (13.3%) | 26 (43.3%) | 21 (35.0%) | 5 (8.3%) | **3.3833** | 0.8253 | 3.00 (1.00) | **Moderate Challenge** |
 | **9** | **Low and unstable prices of yam** | 59 | 1 (1.7%) | 12 (20.3%) | 29 (49.2%) | 13 (22.0%) | 4 (6.8%) | **3.1186** | 0.8727 | 3.00 (1.00) | **Moderate Challenge** |
 | **10** | **Poor access to markets** | 60 | 4 (6.7%) | 20 (33.3%) | 16 (26.7%) | 18 (30.0%) | 2 (3.3%) | **2.9000** | 1.0201 | 3.00 (2.00) | **Moderate Challenge** |
 
-*Note: Likert weights: 1 = Not a Challenge, 2 = Minor, 3 = Moderate, 4 = Severe, 5 = Very Severe. Standardized intervals: 1.00–1.80 (Not a Challenge), 1.81–2.60 (Minor), 2.61–3.40 (Moderate), 3.41–4.20 (Severe), 4.21–5.00 (Very Severe). Item 9 evaluated on valid $n=59$ due to one missing response.*
+*Note: Likert weights: 1 = Not a Challenge, 2 = Minor, 3 = Moderate, 4 = Severe, 5 = Very Severe. Standardized intervals: 1.00–1.80 (Not a Challenge), 1.81–2.60 (Minor), 2.61–3.40 (Moderate), 3.41–4.20 (Severe), 4.21–5.00 (Very Severe). Item 9 evaluated on valid $n=59$ due to one missing response in raw data.*
 
 ---
 **END OF THESIS TABLES DOCUMENT**
