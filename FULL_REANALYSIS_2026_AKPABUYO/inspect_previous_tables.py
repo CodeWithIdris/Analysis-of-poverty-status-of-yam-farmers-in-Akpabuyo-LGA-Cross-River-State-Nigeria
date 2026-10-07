@@ -26,3 +26,4 @@ for f in files:
         print("\n")
     except Exception as e:
         print(f"Error reading {f}: {e}")
+

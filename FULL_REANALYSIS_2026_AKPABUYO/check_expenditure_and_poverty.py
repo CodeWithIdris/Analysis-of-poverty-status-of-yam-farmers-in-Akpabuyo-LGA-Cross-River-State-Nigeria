@@ -63,3 +63,4 @@ diff_class = df[df['poor_rep'] != df['poor_comp']]
 print(f"\nDiscrepant classification cases ({len(diff_class)}):")
 for idx, r in diff_class.iterrows():
     print(f"Respondent {int(r['Unnamed: 0'])}: Size={r['HOUSE HOLD SIZE']}, Rep Total={r['rep_total']:,.0f} (PCHE={r['pche_rep']:,.2f} -> Poor={r['poor_rep']}) vs Comp Sum={r['comp_sum']:,.0f} (PCHE={r['pche_comp']:,.2f} -> Poor={r['poor_comp']})")
+

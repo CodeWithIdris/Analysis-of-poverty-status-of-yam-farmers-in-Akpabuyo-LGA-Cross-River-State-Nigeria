@@ -16,3 +16,4 @@ for i, col in enumerate(df.columns):
 
 print("\n--- Detailed Summary of First 10 rows ---")
 print(df.head(5).to_string())
+

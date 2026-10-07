@@ -45,3 +45,4 @@ for c in valid_cols:
         print(f"  Value Counts: {vc}")
     else:
         print(f"  Distinct values ({len(vc)}): {sorted(list(vc.keys()))[:10]} ...")
+
